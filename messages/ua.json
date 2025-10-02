@@ -5,16 +5,16 @@
 	},
 
 	"LocaleLayout": {
-		"title": "gloria-life.beauty",
-		"description": "Життєвий блог психолога про духовний розвиток"
+		"title": "kobryn-photo.website",
+		"description": "Фотографія, яка працює на вас"
 	},
 	"LocaleSwitcher": {
 		"label": "Sprache ändern",
 		"locale": "{locale, select, en {en} ua {ua} other {Unbekannt}}"
 	},
 	"Manifest": {
-		"description": "gloria-life.beauty",
-		"name": "gloria-life.beauty"
+		"description": "kobryn-photo.website",
+		"name": "kobryn-photo.website"
 	},
 	"PageLayout": {
 		"links": {

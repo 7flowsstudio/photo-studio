@@ -13,8 +13,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
 	return {
 		locale,
 		messages: (
-			await (locale === "pl"
-				? import("../../messages/pl.json")
+			await (locale === "ua"
+				? import("../../messages/ua.json")
 				: import(`../../messages/${locale}.json`))
 		).default,
 	};
