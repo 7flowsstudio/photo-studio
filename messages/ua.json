@@ -1,0 +1,41 @@
+{
+	"Hero": {
+		"button_1": "Психолог",
+		"button_2": "Барбер"
+	},
+
+	"LocaleLayout": {
+		"title": "gloria-life.beauty",
+		"description": "Життєвий блог психолога про духовний розвиток"
+	},
+	"LocaleSwitcher": {
+		"label": "Sprache ändern",
+		"locale": "{locale, select, en {en} ua {ua} other {Unbekannt}}"
+	},
+	"Manifest": {
+		"description": "gloria-life.beauty",
+		"name": "gloria-life.beauty"
+	},
+	"PageLayout": {
+		"links": {
+			"docs": {
+				"description": "Learn more about next-intl in the official docs.",
+				"href": "https://next-intl-docs.vercel.app/",
+				"title": "Docs"
+			},
+			"source": {
+				"description": "Browse the source code of this example on GitHub.",
+				"href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+				"title": "Source code"
+			}
+		}
+	},
+	"NotFoundPage": {
+		"description": "Перевірте адресний рядок вашого браузера або скористайтеся навігацією, щоб перейти на знайому сторінку.",
+		"title": "Сторінка не знайдена"
+	},
+	"Error": {
+		"description": "На жаль, сталася проблема.Ви можете спробувати перезавантажити цю сторінку.",
+		"title": "Щось пішло не так!"
+	}
+}
