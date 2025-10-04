@@ -1,0 +1,13 @@
+.about {
+  background-color: rgba(255, 253, 248, 1);
+}
+
+.containerAbout {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .containerAbout {
+    flex-direction: row;
+  }
+}
