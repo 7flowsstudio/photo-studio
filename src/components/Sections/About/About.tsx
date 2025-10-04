@@ -23,7 +23,6 @@ const About = () => {
           <h2>{t("title")}</h2>
           <p>{t("text")}</p>
           <p>{t("details")}</p>
-          <p>{t("details")}</p>
         </div>
         <div>
           <Image
