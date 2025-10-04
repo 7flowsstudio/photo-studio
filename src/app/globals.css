@@ -1,46 +1,24 @@
 :root {
-	--white: #fff;
-	--White: #f5f5f5;
-	--black: #000;
-	--Dark: #333735;
-	--Dark-2: #676c6a;
-	--Stroke: #d5d1d1;
-	--Stroke-1: #b0b0b0;
-	--Stroke-light: #eeeeee;
-	--background: #8e8e8e;
-	--Green: #09b255;
+	--white: #f9f9f9;
+	--black: #17120a;
+	--background: #fffdf8;
+	--grey: #f8f7f2;
+	--beige: #fbf4e6;
+	--gold: #f3c361;
+	--grey-dark: #515151;
+	--grey-light: #b8b8b8;
+	--overlay: rgba(23, 18, 10, 0.2);
+	--overlay-2: rgba(0, 0, 0, 0.64);
+	--grey-3: #515151;
+	--overlay: rgba(23, 18, 10, 0.2);
+	--overlay-2: rgba(0, 0, 0, 0.64);
+	--grey-5: #cfcfcf;
 }
 
 :root {
-	--font-family: "Montserrat", sans-serif;
-	--second-family: "Montserrat Alternates", sans-serif;
-	--third-family: "Inter", sans-serif;
-	--font3: "Amiora", sans-serif;
-}
-
-@font-face {
-	font-family: "Montserrat";
-	src: url("/fonts/Montserrat-Regular.ttf") format("ttf"),
-		url("/fonts/Montserrat-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Montserrat Alternates";
-	src: url("/fonts/MontserratAlternates-Regular.ttf") format("ttf"),
-		url("/fonts/MontserratAlternates-Regular.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Amiora";
-	src: url("/fonts/AmioraRegular.ttf") format("ttf"),
-		url("/fonts/AmioraRegular.woff") format("woff"),
-		url("/fonts/AmioraRegular.woff2") format("woff2");
-	font-weight: normal;
-	font-style: normal;
+	--font-family: "Manrope", sans-serif;
+	--second-family: "Raleway", sans-serif;
+	--third-family: "Montserrat", sans-serif;
 }
 
 /* Reset styles */
@@ -66,12 +44,11 @@ body {
 	margin: 0;
 }
 
-/* 
 html,
 body {
-  overflow-x: hidden;
-  width: 100%;
-} */
+	overflow-x: hidden;
+	width: 100%;
+}
 
 h1,
 h2,
