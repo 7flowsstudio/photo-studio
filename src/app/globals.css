@@ -1,53 +1,53 @@
 :root {
-	--white: #f9f9f9;
-	--black: #17120a;
-	--background: #fffdf8;
-	--grey: #f8f7f2;
-	--beige: #fbf4e6;
-	--gold: #f3c361;
-	--grey-dark: #515151;
-	--grey-light: #b8b8b8;
-	--overlay: rgba(23, 18, 10, 0.2);
-	--overlay-2: rgba(0, 0, 0, 0.64);
-	--grey-3: #515151;
-	--overlay: rgba(23, 18, 10, 0.2);
-	--overlay-2: rgba(0, 0, 0, 0.64);
-	--grey-5: #cfcfcf;
+  --white: #f9f9f9;
+  --black: #17120a;
+  --background: #fffdf8;
+  --grey: #f8f7f2;
+  --beige: #fbf4e6;
+  --gold: #f3c361;
+  --grey-dark: #515151;
+  --grey-light: #b8b8b8;
+  --overlay: rgba(23, 18, 10, 0.2);
+  --overlay-2: rgba(0, 0, 0, 0.64);
+  --grey-3: #515151;
+  --overlay: rgba(23, 18, 10, 0.2);
+  --overlay-2: rgba(0, 0, 0, 0.64);
+  --grey-5: #cfcfcf;
 }
 
 :root {
-	--font-family: "Manrope", sans-serif;
-	--second-family: "Raleway", sans-serif;
-	--third-family: "Montserrat", sans-serif;
+  --font-family: "Manrope", sans-serif;
+  --second-family: "Raleway", sans-serif;
+  --third-family: "Montserrat", sans-serif;
 }
 
 /* Reset styles */
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-	scroll-behavior: smooth;
-	scroll-padding-top: 50px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
 }
 
 body {
-	background: var(--white);
-	color: var(--black);
-	margin: 0;
+  background: var(--white);
+  color: var(--black);
+  margin: 0;
 }
 
 html,
 body {
-	overflow-x: hidden;
-	width: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1,
@@ -57,105 +57,105 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
+  margin: 0;
 }
 
 p {
-	font-family: var(--second-family);
-	font-weight: 300;
-	font-size: 14px;
-	line-height: 150%;
-	color: var(--color-p);
-	text-align: left;
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-p);
+  text-align: left;
 }
 
 p:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
-	color: currentColor;
-	text-decoration: none;
+  color: currentColor;
+  text-decoration: none;
 }
 
 address {
-	font-style: normal;
+  font-style: normal;
 }
 
 button {
-	cursor: pointer;
-	background: none;
+  cursor: pointer;
+  background: none;
 }
 button:hover {
-	background: var(--Stroke-light);
+  background: var(--Stroke-light);
 }
 
 input {
-	outline: transparent;
+  outline: transparent;
 }
 
 textarea {
-	outline: transparent;
+  outline: transparent;
 }
 
 img {
-	display: block;
-	max-width: 100%;
-	height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .title {
-	font-family: var(--second-family);
-	font-weight: 300;
-	font-size: 70px;
-	color: var(--color-p);
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 70px;
+  color: var(--color-p);
 }
 
 .container {
-	width: 100%;
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 0 16px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
-	.container {
-		padding: 0 32px;
-	}
+  .container {
+    padding: 0 32px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-	.container {
-		padding: 0 48px;
-	}
+  .container {
+    padding: 0 48px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-	.container {
-		max-width: 1440px;
-		padding: 0 64px;
-	}
+  .container {
+    max-width: 1440px;
+    padding: 0 64px;
+  }
 }
 
 .no-scroll {
-	overflow: hidden;
+  overflow: hidden;
 }

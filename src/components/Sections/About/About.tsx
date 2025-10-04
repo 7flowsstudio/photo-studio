@@ -1,7 +1,43 @@
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 import React from "react";
+import s from "./About.module.css";
 
 const About = () => {
-	return <div>About</div>;
+  const t = useTranslations("About");
+  return (
+    <section className={s.about}>
+      <div className={`${s.containerAbout} container`}>
+        <div className="about__image">
+          <Image
+            src="/img/about/aboutme-desk-first.jpg"
+            alt="Image 1"
+            width={432}
+            height={502}
+            sizes="(max-width: 768px) 375px, 432px"
+            style={{ width: "100%", height: "auto" }}
+            priority
+          />
+        </div>
+        <div className="about__content">
+          <h2>{t("title")}</h2>
+          <p>{t("text")}</p>
+          <p>{t("details")}</p>
+        </div>
+        <div>
+          <Image
+            src="/img/about/aboutme-desk-sec.jpg"
+            alt="Image 2"
+            width={546}
+            height={502}
+            sizes="(max-width: 768px) 375px, 546px"
+            style={{ width: "100%", height: "auto" }}
+            priority
+          />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;

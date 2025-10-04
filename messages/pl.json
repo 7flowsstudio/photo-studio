@@ -1,41 +1,47 @@
 {
-	"Hero": {
-		"button_1": "Psycholog",
-		"button_2": "Fryzjer"
-	},
-
-	"LocaleLayout": {
-		"title": "kobryn-photo.website",
-		"description": "Fotografia, która pracuje dla Ciebie"
-	},
-	"LocaleSwitcher": {
-		"label": "Sprache ändern",
-		"locale": "{locale, select, en {en} ua {ua} other {Unbekannt}}"
-	},
-	"Manifest": {
-		"description": "kobryn-photo.website",
-		"name": "kobryn-photo.website"
-	},
-	"PageLayout": {
-		"links": {
-			"docs": {
-				"description": "Learn more about next-intl in the official docs.",
-				"href": "https://next-intl-docs.vercel.app/",
-				"title": "Docs"
-			},
-			"source": {
-				"description": "Browse the source code of this example on GitHub.",
-				"href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
-				"title": "Source code"
-			}
-		}
-	},
-	"NotFoundPage": {
-		"description": "Sprawdź pasek adresu przeglądarki lub skorzystaj z nawigacji, aby przejść do znanej strony.",
-		"title": "Nie znaleziono strony"
-	},
-	"Error": {
-		"description": "Przepraszamy, wystąpił problem. Możesz spróbować ponownie załadować tę stronę.",
-		"title": "Coś poszło nie tak!"
-	}
+  "Hero": {
+    "button_1": "Psycholog",
+    "button_2": "Fryzjer"
+  },
+  "About": {
+    "About": {
+      "title": "CZEŚĆ, JESTEM KHRYSTYNA",
+      "text": "Jestem fotografką ze Świnoujścia. Od ponad 5 lat fotografuję ludzi i marki tak, aby w kadrze pozostało nie tylko piękno, ale i prawdziwe emocje.",
+      "details": "Wśród moich klientów są Biedronka, Martes Sport, Solar i inne firmy oraz startupy."
+    }
+  },
+  "LocaleLayout": {
+    "title": "kobryn-photo.website",
+    "description": "Fotografia, która pracuje dla Ciebie"
+  },
+  "LocaleSwitcher": {
+    "label": "Sprache ändern",
+    "locale": "{locale, select, en {en} ua {ua} other {Unbekannt}}"
+  },
+  "Manifest": {
+    "description": "kobryn-photo.website",
+    "name": "kobryn-photo.website"
+  },
+  "PageLayout": {
+    "links": {
+      "docs": {
+        "description": "Learn more about next-intl in the official docs.",
+        "href": "https://next-intl-docs.vercel.app/",
+        "title": "Docs"
+      },
+      "source": {
+        "description": "Browse the source code of this example on GitHub.",
+        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+        "title": "Source code"
+      }
+    }
+  },
+  "NotFoundPage": {
+    "description": "Sprawdź pasek adresu przeglądarki lub skorzystaj z nawigacji, aby przejść do znanej strony.",
+    "title": "Nie znaleziono strony"
+  },
+  "Error": {
+    "description": "Przepraszamy, wystąpił problem. Możesz spróbować ponownie załadować tę stronę.",
+    "title": "Coś poszło nie tak!"
+  }
 }
