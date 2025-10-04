@@ -1,4 +1,15 @@
 {
+  "Header": {
+    "menu": {
+      "portfolio": "Portfolio",
+      "services": "Usługi",
+      "reviews": "Opinie",
+      "blog": "Blog",
+      "contacts": "Kontakt"
+    },
+    "button": "Zamów sesję"
+  },
+
   "Hero": {
     "button_1": "Psycholog",
     "button_2": "Fryzjer"
@@ -10,6 +21,7 @@
       "details": "Wśród moich klientów są Biedronka, Martes Sport, Solar i inne firmy oraz startupy."
     }
   },
+
   "LocaleLayout": {
     "title": "kobryn-photo.website",
     "description": "Fotografia, która pracuje dla Ciebie"
