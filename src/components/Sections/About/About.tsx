@@ -19,10 +19,10 @@ const About = () => {
             priority
           />
         </div>
-        <div className={s.textAbout}>
-          <h2>{t("title")}</h2>
-          <p>{t("text")}</p>
-          <p>{t("details")}</p>
+        <div className={s.textAboutCont}>
+          <h2 className={s.titleAbout}>{t("title")}</h2>
+          <p className={s.textAbout}>{t("text")}</p>
+          <p className={s.textAboutLast}>{t("details")}</p>
         </div>
         <div className={s.imgAbout}>
           <Image

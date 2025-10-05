@@ -59,9 +59,17 @@ h6,
 p {
   margin: 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--second-family);
+}
 
 p {
-  font-family: var(--second-family);
+  font-family: var(--font-family);
   font-weight: 300;
   font-size: 14px;
   line-height: 150%;

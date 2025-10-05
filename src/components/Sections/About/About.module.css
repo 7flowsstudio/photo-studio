@@ -7,16 +7,27 @@
   flex-direction: column;
   justify-content: center;
 }
-.textAbout {
+.textAboutCont {
   display: flex;
   flex-direction: column;
   width: auto;
   /* max-width: 342px; */
   padding: 24px 32px;
 }
+
 .imgAbout {
   position: relative;
   width: 100%;
+}
+.titleAbout {
+  padding-top: 24px;
+  padding-bottom: 12px;
+}
+.textAbout {
+  padding-bottom: 8px;
+}
+.textAboutLast {
+  padding-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .containerAbout {
@@ -38,9 +49,17 @@
     flex: 546 1 0;
   }
 
-  .textAbout {
-    max-width: 319px;
+  .textAboutCont {
+    flex: 0 1 319px;
+    /* max-width: 319px; */
     background-color: rgba(248, 247, 242, 1);
     /* padding: 24px 32px 91px 32px; */
+  }
+  .titleAbout {
+    padding-bottom: 32px;
+    padding-top: 0;
+  }
+  .textAbout {
+    padding-bottom: 16px;
   }
 }
