@@ -8,30 +8,30 @@ const About = () => {
   return (
     <section className={s.about}>
       <div className={`${s.containerAbout} container`}>
-        <div className="about__image">
+        <div className={s.imgAbout}>
           <Image
             src="/img/about/aboutme-desk-first.jpg"
             alt="Image 1"
             width={432}
             height={502}
             sizes="(max-width: 768px) 375px, 432px"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "100%" }}
             priority
           />
         </div>
-        <div className="about__content">
+        <div className={s.textAbout}>
           <h2>{t("title")}</h2>
           <p>{t("text")}</p>
           <p>{t("details")}</p>
         </div>
-        <div>
+        <div className={s.imgAbout}>
           <Image
             src="/img/about/aboutme-desk-sec.jpg"
             alt="Image 2"
             width={546}
             height={502}
             sizes="(max-width: 768px) 375px, 546px"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "100%" }}
             priority
           />
         </div>
