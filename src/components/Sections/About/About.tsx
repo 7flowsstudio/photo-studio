@@ -22,7 +22,7 @@ const About = () => {
         <div className={s.textAboutCont}>
           <h2 className={s.titleAbout}>{t("title")}</h2>
           <p className={s.textAbout}>{t("text")}</p>
-          <p>{t("details")}</p>
+          <p className={s.textAboutLast}>{t("details")}</p>
         </div>
         <div className={s.imgAbout}>
           <Image
