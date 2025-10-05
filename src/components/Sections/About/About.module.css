@@ -13,7 +13,9 @@
   width: auto;
   /* max-width: 342px; */
   padding: 24px 32px;
+  font-family: "Manrope", sans-serif;
 }
+
 .imgAbout {
   position: relative;
   width: 100%;
