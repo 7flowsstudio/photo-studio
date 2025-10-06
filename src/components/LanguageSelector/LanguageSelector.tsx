@@ -15,6 +15,7 @@ const LanguageSelector = () => {
   const languages = [
     { code: "pl", label: "POL" },
     { code: "ua", label: "UKR" },
+    { code: "en", label: "ENG" },
   ];
 
   const handleChange = (newLocale: string) => {
