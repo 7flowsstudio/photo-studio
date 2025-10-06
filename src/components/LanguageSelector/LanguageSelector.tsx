@@ -42,8 +42,8 @@ const LanguageSelector = () => {
         <Image
           src="/img/icons/arrow.svg"
           alt="arrow"
-          width={16}
-          height={16}
+          width={12}
+          height={12}
           className={`${styles.arrow} ${isOpen ? styles.open : ""}`}
         />
       </button>
