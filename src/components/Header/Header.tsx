@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { Link } from "@/i18n/routing";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import styles from "./Header.module.css";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
@@ -20,9 +22,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={`${styles.desktop} container`}>
-        <a href="/">
-          <img src="/img/logo.svg" alt="logo" className={styles.logoDesktop} />
-        </a>
+        <Link href="/">
+          <Image src="/img/logo.svg" alt="logo" width={106} height={18} />
+        </Link>
 
         <nav className={styles.navDesktop}>
           <ul className={styles.menuListDesktop}>
@@ -36,7 +38,7 @@ const Header = () => {
 
         <div className={styles.headerRightDesktop}>
           <LanguageSelector />
-          <a className={styles.btnDesktop} href="#">
+          <a className={styles.btnDesktop} href="#contacts">
             {t("button")}
           </a>
         </div>
@@ -58,9 +60,15 @@ const Header = () => {
 
       {menuOpen && (
         <nav className={`${styles.mobileMenu} ${menuOpen ? styles.show : ""}`}>
-          <a href="#">
-            <img src="/img/logo.svg" alt="logo" className={styles.logoMobile} />
-          </a>
+          <Link href="/">
+            <Image
+              src="/img/logo.svg"
+              alt="logo"
+              width={131}
+              height={22}
+              className={styles.logoMobile}
+            />
+          </Link>
           <ul className={styles.menuList}>
             {menuItems.map(({ key, href }) => (
               <li key={key}>
@@ -68,7 +76,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <a className={styles.btnMobile} href="#">
+          <a className={styles.btnMobile} href="#contacts">
             {t("button")}
           </a>
         </nav>

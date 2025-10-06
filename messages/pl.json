@@ -15,11 +15,9 @@
     "button_2": "Fryzjer"
   },
   "About": {
-    "About": {
-      "title": "CZEŚĆ, JESTEM KHRYSTYNA",
-      "text": "Jestem fotografką ze Świnoujścia. Od ponad 5 lat fotografuję ludzi i marki tak, aby w kadrze pozostało nie tylko piękno, ale i prawdziwe emocje.",
-      "details": "Wśród moich klientów są Biedronka, Martes Sport, Solar i inne firmy oraz startupy."
-    }
+    "title": "CZEŚĆ, JESTEM KHRYSTYNA",
+    "text": "Jestem fotografką ze Świnoujścia. Od ponad 5 lat fotografuję ludzi i marki tak, aby w kadrze pozostało nie tylko piękno, ale i prawdziwe emocje.",
+    "details": "Wśród moich klientów są Biedronka, Martes Sport, Solar i inne firmy oraz startupy."
   },
 
   "LocaleLayout": {
