@@ -36,32 +36,34 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={`${styles.desktop} container`}>
-        <Link href="/">
-          <Image
-            src="/img/logo.svg"
-            alt="logo"
-            width={80}
-            height={14}
-            className={styles.logoMobileVersion}
-          />
+        <div className={styles.headerLeftDesktop}>
+          <Link href="/">
+            <Image
+              src="/img/logo.svg"
+              alt="logo"
+              width={80}
+              height={14}
+              className={styles.logoMobileVersion}
+            />
 
-          <Image
-            src="/img/logo.svg"
-            alt="logo"
-            width={106}
-            height={18}
-            className={styles.logoDesktopVersion}
-          />
-        </Link>
-        <nav className={styles.navDesktop}>
-          <ul className={styles.menuListDesktop}>
-            {menuItems.map(({ key, href }) => (
-              <li key={key}>
-                <a href={href}>{t(`menu.${key}`)}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+            <Image
+              src="/img/logo.svg"
+              alt="logo"
+              width={106}
+              height={18}
+              className={styles.logoDesktopVersion}
+            />
+          </Link>
+          <nav className={styles.navDesktop}>
+            <ul className={styles.menuListDesktop}>
+              {menuItems.map(({ key, href }) => (
+                <li key={key}>
+                  <a href={href}>{t(`menu.${key}`)}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
 
         <div className={styles.headerRightDesktop}>
           <LanguageSelector />
@@ -105,7 +107,11 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <a className={styles.btnMobile} href="#contacts">
+          <a
+            className={styles.btnMobile}
+            onClick={handleClick}
+            href="#contacts"
+          >
             {t("button")}
           </a>
         </nav>
