@@ -9,6 +9,7 @@ import LanguageSelector from "../LanguageSelector/LanguageSelector";
 const Header = () => {
   const t = useTranslations("Header");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   useEffect(() => {
@@ -21,6 +22,20 @@ const Header = () => {
     }
   }, [menuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
   const menuItems = [
     { key: "portfolio", href: "#portfolio" },
     { key: "services", href: "#services" },
@@ -34,12 +49,12 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div className={`${styles.desktop} container`}>
         <div className={styles.headerLeftDesktop}>
           <Link href="/">
             <Image
-              src="/img/logo.svg"
+              src={scrolled ? "/img/logo-black.svg" : "/img/logo.svg"}
               alt="logo"
               width={80}
               height={14}
@@ -47,7 +62,7 @@ const Header = () => {
             />
 
             <Image
-              src="/img/logo.svg"
+              src={scrolled ? "/img/logo-black.svg" : "/img/logo.svg"}
               alt="logo"
               width={106}
               height={18}
@@ -66,7 +81,7 @@ const Header = () => {
         </div>
 
         <div className={styles.headerRightDesktop}>
-          <LanguageSelector />
+          <LanguageSelector scrolled={scrolled} />
           <a className={styles.btnDesktop} href="#contacts">
             {t("button")}
           </a>

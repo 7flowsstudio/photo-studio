@@ -1,5 +1,5 @@
 .header {
-   position: absolute;
+   position: fixed;
    top: 0;
    left: 0;
    width: 100%;
@@ -11,7 +11,28 @@
    justify-content: space-between;
    padding: 16px;
    padding-top: 60px;
-   transition: padding 0.3s ease;
+   transition: padding 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.header.scrolled {
+   background: var(--background);
+   color: var(--black);
+   -webkit-backdrop-filter: blur(8.5px);
+   backdrop-filter: blur(8.5px);
+
+}
+
+.header.scrolled a,
+.header.scrolled .btnDesktop {
+   color: var(--black);
+}
+
+.header.scrolled a:hover {
+   border-color: var(--black);
+}
+
+.header.scrolled .btnDesktop:hover {
+   border: 1px solid var(--gold);
 }
 
 .desktop {

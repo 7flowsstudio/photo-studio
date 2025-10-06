@@ -3,6 +3,35 @@
    display: inline-block;
 }
 
+.scrolledDropdown .dropdownButton {
+   color: var(--black);
+}
+
+.scrolledDropdown .dropdownButton::after {
+   background: var(--black);
+}
+
+.scrolledDropdown .dropdownList {
+   -webkit-backdrop-filter: blur(2px);
+   backdrop-filter: blur(2px);
+}
+
+.scrolledDropdown .dropdownItem {
+   color: var(--black);
+}
+
+.scrolledDropdown .dropdownItem::after {
+   background: var(--black);
+}
+
+.scrolledDropdown .dropdownItem.active {
+   color: var(--gold);
+}
+
+.scrolledDropdown .arrow {
+   filter: invert(1);
+}
+
 .dropdownButton {
    display: flex;
    align-items: center;

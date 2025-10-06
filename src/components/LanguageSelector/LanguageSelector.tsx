@@ -5,7 +5,11 @@ import Image from "next/image";
 import { useState } from "react";
 import styles from "./LanguageSelector.module.css";
 
-const LanguageSelector = () => {
+interface LanguageSelectorProps {
+  scrolled?: boolean;
+}
+
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({ scrolled }) => {
   const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
@@ -31,7 +35,11 @@ const LanguageSelector = () => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   return (
-    <div className={styles.dropdown}>
+    <div
+      className={`${styles.dropdown} ${
+        scrolled ? styles.scrolledDropdown : ""
+      }`}
+    >
       <button
         type="button"
         className={styles.dropdownButton}
