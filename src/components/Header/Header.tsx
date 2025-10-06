@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -11,6 +11,16 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+  }, [menuOpen]);
+
   const menuItems = [
     { key: "portfolio", href: "#portfolio" },
     { key: "services", href: "#services" },
@@ -19,13 +29,30 @@ const Header = () => {
     { key: "contacts", href: "#contacts" },
   ];
 
+  const handleClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className={styles.header}>
       <div className={`${styles.desktop} container`}>
         <Link href="/">
-          <Image src="/img/logo.svg" alt="logo" width={106} height={18} />
-        </Link>
+          <Image
+            src="/img/logo.svg"
+            alt="logo"
+            width={80}
+            height={14}
+            className={styles.logoMobileVersion}
+          />
 
+          <Image
+            src="/img/logo.svg"
+            alt="logo"
+            width={106}
+            height={18}
+            className={styles.logoDesktopVersion}
+          />
+        </Link>
         <nav className={styles.navDesktop}>
           <ul className={styles.menuListDesktop}>
             {menuItems.map(({ key, href }) => (
@@ -72,7 +99,9 @@ const Header = () => {
           <ul className={styles.menuList}>
             {menuItems.map(({ key, href }) => (
               <li key={key}>
-                <a href={href}>{t(`menu.${key}`)}</a>
+                <a href={href} onClick={handleClick}>
+                  {t(`menu.${key}`)}
+                </a>
               </li>
             ))}
           </ul>
