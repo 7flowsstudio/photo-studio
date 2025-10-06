@@ -35,7 +35,7 @@ const Header = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   const menuItems = [
     { key: "portfolio", href: "#portfolio" },
     { key: "services", href: "#services" },
@@ -89,10 +89,12 @@ const Header = () => {
       </div>
 
       <div className={styles.headerRightMobile}>
-        <LanguageSelector />
+        <LanguageSelector scrolled={scrolled} />
         <button
           type="button"
-          className={`${styles.burger} ${menuOpen ? styles.open : ""}`}
+          className={`${styles.burger} ${menuOpen ? styles.open : ""} ${
+            scrolled ? styles.scrolledBurger : ""
+          }`}
           onClick={toggleMenu}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
@@ -102,35 +104,33 @@ const Header = () => {
         </button>
       </div>
 
-      {menuOpen && (
-        <nav className={`${styles.mobileMenu} ${menuOpen ? styles.show : ""}`}>
-          <Link href="/">
-            <Image
-              src="/img/logo.svg"
-              alt="logo"
-              width={131}
-              height={22}
-              className={styles.logoMobile}
-            />
-          </Link>
-          <ul className={styles.menuList}>
-            {menuItems.map(({ key, href }) => (
-              <li key={key}>
-                <a href={href} onClick={handleClick}>
-                  {t(`menu.${key}`)}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <a
-            className={styles.btnMobile}
-            onClick={handleClick}
-            href="#contacts"
-          >
-            {t("button")}
-          </a>
-        </nav>
-      )}
+      <nav
+        className={`${styles.mobileMenu} ${menuOpen ? styles.show : ""} ${
+          scrolled ? styles.scrolledMenu : ""
+        }`}
+      >
+        <Link href="/">
+          <Image
+            src={scrolled ? "/img/logo-black.svg" : "/img/logo.svg"}
+            alt="logo"
+            width={131}
+            height={22}
+            className={styles.logoMobile}
+          />
+        </Link>
+        <ul className={styles.menuList}>
+          {menuItems.map(({ key, href }) => (
+            <li key={key}>
+              <a href={href} onClick={handleClick}>
+                {t(`menu.${key}`)}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a className={styles.btnMobile} onClick={handleClick} href="#contacts">
+          {t("button")}
+        </a>
+      </nav>
     </header>
   );
 };
