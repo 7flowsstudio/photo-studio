@@ -1,0 +1,11 @@
+.hero {
+   position: relative;
+   background-image:
+      linear-gradient(0deg, rgba(0, 0, 0, 0) 61.72%, #000000 80.51%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 74.02%, #000000 90.63%),
+      url("/img/hero/background-mobile.png");
+   height: 100vh;
+   background-size: cover;
+   background-position: center 130%;
+   background-repeat: no-repeat;
+}
