@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -9,7 +9,32 @@ import LanguageSelector from "../LanguageSelector/LanguageSelector";
 const Header = () => {
   const t = useTranslations("Header");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuItems = [
     { key: "portfolio", href: "#portfolio" },
@@ -19,25 +44,44 @@ const Header = () => {
     { key: "contacts", href: "#contacts" },
   ];
 
-  return (
-    <header className={styles.header}>
-      <div className={`${styles.desktop} container`}>
-        <Link href="/">
-          <Image src="/img/logo.svg" alt="logo" width={106} height={18} />
-        </Link>
+  const handleClick = () => {
+    setMenuOpen(false);
+  };
 
-        <nav className={styles.navDesktop}>
-          <ul className={styles.menuListDesktop}>
-            {menuItems.map(({ key, href }) => (
-              <li key={key}>
-                <a href={href}>{t(`menu.${key}`)}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+  return (
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+      <div className={`${styles.desktop} container`}>
+        <div className={styles.headerLeftDesktop}>
+          <Link href="/">
+            <Image
+              src={scrolled ? "/img/logo-black.svg" : "/img/logo.svg"}
+              alt="logo"
+              width={80}
+              height={14}
+              className={styles.logoMobileVersion}
+            />
+
+            <Image
+              src={scrolled ? "/img/logo-black.svg" : "/img/logo.svg"}
+              alt="logo"
+              width={106}
+              height={18}
+              className={styles.logoDesktopVersion}
+            />
+          </Link>
+          <nav className={styles.navDesktop}>
+            <ul className={styles.menuListDesktop}>
+              {menuItems.map(({ key, href }) => (
+                <li key={key}>
+                  <a href={href}>{t(`menu.${key}`)}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
 
         <div className={styles.headerRightDesktop}>
-          <LanguageSelector />
+          <LanguageSelector scrolled={scrolled} />
           <a className={styles.btnDesktop} href="#contacts">
             {t("button")}
           </a>
@@ -45,10 +89,12 @@ const Header = () => {
       </div>
 
       <div className={styles.headerRightMobile}>
-        <LanguageSelector />
+        <LanguageSelector scrolled={scrolled} />
         <button
           type="button"
-          className={`${styles.burger} ${menuOpen ? styles.open : ""}`}
+          className={`${styles.burger} ${menuOpen ? styles.open : ""} ${
+            scrolled ? styles.scrolledBurger : ""
+          }`}
           onClick={toggleMenu}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
@@ -58,29 +104,33 @@ const Header = () => {
         </button>
       </div>
 
-      {menuOpen && (
-        <nav className={`${styles.mobileMenu} ${menuOpen ? styles.show : ""}`}>
-          <Link href="/">
-            <Image
-              src="/img/logo.svg"
-              alt="logo"
-              width={131}
-              height={22}
-              className={styles.logoMobile}
-            />
-          </Link>
-          <ul className={styles.menuList}>
-            {menuItems.map(({ key, href }) => (
-              <li key={key}>
-                <a href={href}>{t(`menu.${key}`)}</a>
-              </li>
-            ))}
-          </ul>
-          <a className={styles.btnMobile} href="#contacts">
-            {t("button")}
-          </a>
-        </nav>
-      )}
+      <nav
+        className={`${styles.mobileMenu} ${menuOpen ? styles.show : ""} ${
+          scrolled ? styles.scrolledMenu : ""
+        }`}
+      >
+        <Link href="/">
+          <Image
+            src={scrolled ? "/img/logo-black.svg" : "/img/logo.svg"}
+            alt="logo"
+            width={131}
+            height={22}
+            className={styles.logoMobile}
+          />
+        </Link>
+        <ul className={styles.menuList}>
+          {menuItems.map(({ key, href }) => (
+            <li key={key}>
+              <a href={href} onClick={handleClick}>
+                {t(`menu.${key}`)}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a className={styles.btnMobile} onClick={handleClick} href="#contacts">
+          {t("button")}
+        </a>
+      </nav>
     </header>
   );
 };

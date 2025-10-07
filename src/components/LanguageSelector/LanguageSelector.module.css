@@ -3,6 +3,35 @@
    display: inline-block;
 }
 
+.scrolledDropdown .dropdownButton {
+   color: var(--black);
+}
+
+.scrolledDropdown .dropdownButton::after {
+   background: var(--black);
+}
+
+.scrolledDropdown .dropdownList {
+   -webkit-backdrop-filter: blur(2px);
+   backdrop-filter: blur(2px);
+}
+
+.scrolledDropdown .dropdownItem {
+   color: var(--black);
+}
+
+.scrolledDropdown .dropdownItem::after {
+   background: var(--black);
+}
+
+.scrolledDropdown .dropdownItem.active {
+   color: var(--gold);
+}
+
+.scrolledDropdown .arrow {
+   filter: invert(1);
+}
+
 .dropdownButton {
    display: flex;
    align-items: center;
@@ -11,7 +40,7 @@
    border: none;
    color: var(--white);
    font-size: 16px;
-   font-weight: 500;
+   font-weight: 400;
    cursor: pointer;
 }
 
@@ -21,19 +50,17 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   height: 2px;
+   height: 1px;
    background: var(--white);
    opacity: 0;
    transition: opacity 0.2s ease;
 }
 
 .dropdownButton:hover::after {
-   opacity: 0.8;
+   opacity: 1;
 }
 
 .arrow {
-   width: 12px;
-   height: 4px;
    transition: transform 0.3s ease;
 }
 
@@ -59,10 +86,10 @@
    border: none;
    color: var(--white);
    font-size: 16px;
-   font-weight: 500;
+   font-weight: 400;
    cursor: pointer;
    padding: 6px 0px;
-   padding-right: 22px;
+   padding-right: 13px;
    width: 100%;
    text-align: left;
    position: relative;
@@ -75,16 +102,40 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   height: 2px;
+   height: 1px;
    background: var(--white);
    opacity: 0;
    transition: opacity 0.2s ease;
 }
 
-.dropdownItem:hover::after,
-.dropdownItem.active:hover::after {
-   opacity: 0.8;
+.dropdownItem:hover::after {
+   opacity: 1;
 }
+
 .dropdownItem.active {
    color: var(--gold);
+}
+
+.dropdownButton::after,
+.dropdownItem::after {
+   display: none;
+}
+
+@media (min-width: 768px) {
+   .dropdownItem {
+      padding-right: 22px;
+   }
+}
+
+@media (min-width: 1024px) {
+
+   .dropdownButton::after,
+   .dropdownItem::after {
+      display: block;
+   }
+
+   .dropdownButton:hover::after,
+   .dropdownItem:hover::after {
+      opacity: 1;
+   }
 }
