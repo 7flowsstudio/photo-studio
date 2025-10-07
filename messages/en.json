@@ -2,27 +2,28 @@
   "Header": {
     "menu": {
       "portfolio": "Portfolio",
-      "services": "Usługi",
-      "reviews": "Opinie",
+      "services": "Services",
+      "reviews": "Reviews",
       "blog": "Blog",
-      "contacts": "Kontakt"
+      "contacts": "Contacts"
     },
-    "button": "Zamów sesję"
+    "button": "Book your shoot"
   },
 
   "Hero": {
-    "button_1": "Psycholog",
-    "button_2": "Fryzjer"
+    "button_1": "Психолог",
+    "button_2": "Барбер"
   },
+
   "About": {
-    "title": "CZEŚĆ, JESTEM KHRYSTYNA",
-    "text": "Jestem fotografką ze Świnoujścia. Od ponad 5 lat fotografuję ludzi i marki tak, aby w kadrze pozostało nie tylko piękno, ale i prawdziwe emocje.",
-    "details": "Wśród moich klientów są Biedronka, Martes Sport, Solar i inne firmy oraz startupy."
+    "title": "HI, I’M KHRYSTYNA",
+    "text": "I’m a photographer based in Świnoujście. For over 5 years, I’ve been helping people and brands capture not just beauty, but real emotion in every frame.",
+    "details": "My clients include Biedronka, Martes Sport, Solar, and other companies and startups."
   },
 
   "LocaleLayout": {
     "title": "kobryn-photo.website",
-    "description": "Fotografia, która pracuje dla Ciebie"
+    "description": "Photography that works for you"
   },
   "LocaleSwitcher": {
     "label": "Sprache ändern",
@@ -47,11 +48,11 @@
     }
   },
   "NotFoundPage": {
-    "description": "Sprawdź pasek adresu przeglądarki lub skorzystaj z nawigacji, aby przejść do znanej strony.",
-    "title": "Nie znaleziono strony"
+    "description": "Check your browser's address bar or use the navigation to go to a known page.",
+    "title": "Page Not Found"
   },
   "Error": {
-    "description": "Przepraszamy, wystąpił problem. Możesz spróbować ponownie załadować tę stronę.",
-    "title": "Coś poszło nie tak!"
+    "description": "Unfortunately, an error occurred. You can try reloading this page.",
+    "title": "Something Went Wrong!"
   }
 }

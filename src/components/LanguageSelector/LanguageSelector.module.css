@@ -1,0 +1,90 @@
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+
+.dropdownButton {
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   background: transparent;
+   border: none;
+   color: var(--white);
+   font-size: 16px;
+   font-weight: 500;
+   cursor: pointer;
+}
+
+.dropdownButton::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 2px;
+   background: var(--white);
+   opacity: 0;
+   transition: opacity 0.2s ease;
+}
+
+.dropdownButton:hover::after {
+   opacity: 0.8;
+}
+
+.arrow {
+   width: 12px;
+   height: 4px;
+   transition: transform 0.3s ease;
+}
+
+.arrow.open {
+   transform: rotate(180deg);
+}
+
+.dropdownList {
+   position: absolute;
+   top: 100%;
+   right: 0;
+   background: transparent;
+   padding: 6px 0;
+   margin: 0;
+   list-style: none;
+   text-align: right;
+   z-index: 50;
+}
+
+.dropdownItem {
+   display: block;
+   background: transparent;
+   border: none;
+   color: var(--white);
+   font-size: 16px;
+   font-weight: 500;
+   cursor: pointer;
+   padding: 6px 0px;
+   padding-right: 22px;
+   width: 100%;
+   text-align: left;
+   position: relative;
+   transition: color 0.3s ease;
+}
+
+.dropdownItem::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 2px;
+   background: var(--white);
+   opacity: 0;
+   transition: opacity 0.2s ease;
+}
+
+.dropdownItem:hover::after,
+.dropdownItem.active:hover::after {
+   opacity: 0.8;
+}
+.dropdownItem.active {
+   color: var(--gold);
+}
