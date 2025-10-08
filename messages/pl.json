@@ -11,9 +11,12 @@
   },
 
   "Hero": {
-    "button_1": "Psycholog",
-    "button_2": "Fryzjer"
+    "bage": "-10% dla nowych klientów!",
+    "title": "Fotografia, która działa dla Ciebie",
+    "details": "Pomagam firmom i osobom prywatnym tworzyć obrazy, które przekazują emocje, charakter i znaczenie.",
+    "button": "Zamów sesję"
   },
+
   "About": {
     "title": "CZEŚĆ, JESTEM KHRYSTYNA",
     "text": "Jestem fotografką ze Świnoujścia. Od ponad 5 lat fotografuję ludzi i marki tak, aby w kadrze pozostało nie tylko piękno, ale i prawdziwe emocje.",

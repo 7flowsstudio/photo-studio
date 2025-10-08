@@ -11,8 +11,10 @@
   },
 
   "Hero": {
-    "button_1": "Психолог",
-    "button_2": "Барбер"
+    "bage": "-10% for new clients!",
+    "title": "Photography that works for you",
+    "details": "I help businesses and individuals capture images that reflect emotion, character, and meaning",
+    "button": "Book your shoot"
   },
 
   "About": {

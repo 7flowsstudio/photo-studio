@@ -4,24 +4,159 @@
       linear-gradient(0deg, rgba(0, 0, 0, 0) 61.72%, #000000 80.51%),
       linear-gradient(180deg, rgba(0, 0, 0, 0) 74.02%, #000000 90.63%),
       url("/img/hero/background-mobile.png");
-   min-height: 100vh;
-   background-size: cover;
-   background-position: center bottom;
+   height: 866px;
+   background-size: 120%;
+   background-position: 75% 105%;
    background-repeat: no-repeat;
+}
+
+.desktop {
+   display: none;
+}
+
+.wrapperInfo {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 866px;
+   padding-top: 140px;
+   padding-bottom: 100px;
+}
+
+.content {
+   color: var(--white);
+   width: 342px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-left: 16px;
+   gap: 12px;
+}
+
+.contentMobileBotom {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   align-items: center;
+}
+
+.bage {
+   color: var(--white);
+   border: 1px solid var(--white);
+   border-radius: 24px;
+   background: var(--overlay);
+   font-family: var(--font-family);
+   font-size: 14px;
+   font-weight: 500;
+   padding: 8px 16px;
+}
+
+.title {
+   font-family: var(--second-family);
+   font-weight: 800;
+   font-size: 26px;
+   text-transform: uppercase;
+   color: var(--white);
+}
+
+.details {
+   font-family: var(--second-family);
+   font-weight: 400;
+   font-size: 18px;
+   color: var(--white);
+}
+
+.btn {
+   color: var(--black);
+   background: var(--gold);
+   font-family: var(--second-family);
+   font-weight: 500;
+   font-size: 18px;
+   text-transform: uppercase;
+   padding: 13.5px 78.5px;
+   border-radius: 8px;
+   text-align: center;
+}
+
+@media screen and (min-width: 395px) {
+   .content {
+      padding: 10px;
+      max-width: 342px;
+      width: 90%;
+   }
+}
+
+@media screen and (min-width: 412px) {
+   .hero {
+      background-position: 20% 98%;
+      background-size: 117%;
+   }
+
+   .content {
+      width: 90%;
+   }
 }
 
 @media screen and (min-width: 578px) {
    .hero {
       background-position: 20% 78%;
    }
+
+   .content {
+      max-width: 670px;
+      width: 100%;
+   }
 }
 
 @media screen and (min-width: 768px) {
    .hero {
+      height: 100vh;
+      background-size: cover;
       background-image:
          linear-gradient(270deg, rgba(0, 0, 0, 0) 39.24%, rgba(0, 0, 0, 0.8) 100%),
          url("/img/hero/background.png");
       background-position: 60% 130%;
+
+   }
+
+   .desktop {
+      display: block;
+   }
+
+   .mobile {
+      display: none;
+   }
+
+   .wrapperInfo {
+      padding: 0;
+      justify-content: center;
+   }
+
+   .content {
+      max-width: 670px;
+      width: 100%;
+      gap: 32px;
+      justify-content: center;
+      align-items: flex-start;
+   }
+
+   .details {
+      font-size: 24px;
+   }
+
+   .btn.desktop {
+      align-self: flex-start;
+      margin-top: 32px;
+      padding: 16.5px 124.5px;
+   }
+
+   .title {
+      font-size: 48px;
+   }
+
+   .btn:hover.desktop {
+      background: #F3B433;
+      box-shadow: 0px 0px 14.5px 1px #F2D79F42;
 
    }
 }
@@ -30,6 +165,11 @@
    .hero {
       background-position-x: right;
       background-position-y: top;
+   }
+}
 
+@media screen and (min-width: 1440px) {
+   .wrapperInfo {
+      margin-left: 260px;
    }
 }
