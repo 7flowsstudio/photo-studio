@@ -7,8 +7,10 @@ const Hero = () => {
   const t = useTranslations("Hero");
   return (
     <section className={styles.hero}>
+      <div className="container">
+
       <div className={styles.wrapperInfo}>
-        <div className={`${styles.content} container`}>
+        <div className={styles.content}>
           <span className={`${styles.bage} ${styles.desktop}`}>
             {t("bage")}
           </span>
@@ -24,6 +26,7 @@ const Hero = () => {
             {t("button")}
           </a>
         </div>
+      </div>
       </div>
     </section>
   );
