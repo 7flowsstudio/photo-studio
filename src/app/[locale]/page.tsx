@@ -2,6 +2,7 @@ import About from "@/components/Sections/About/About";
 import Hero from "@/components/Sections/Hero/Hero";
 import { Locale } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
+import {Portfolio} from "@/components/Sections/Portfolio/Portfolio";
 
 type Props = {
 	params: Promise<{ locale: Locale }>;
@@ -17,6 +18,7 @@ export default async function IndexPage({ params }: Props) {
 		<>
 			<Hero />
 			<About />
+			<Portfolio />
 		</>
 	);
 }
