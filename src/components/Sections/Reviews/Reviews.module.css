@@ -1,0 +1,119 @@
+.reviews {
+   background-color: var(--black);
+   color: var(--white);
+   padding: 40px 16px;
+   text-align: left;
+   max-width: 480px;
+   margin: 0 auto;
+}
+
+.title {
+   font-size: 24px;
+   text-align: center;
+   font-family: var(--second-family);
+   text-transform: uppercase;
+   font-weight: 600;
+   margin-bottom: 32px;
+}
+
+.slide {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.text {
+   font-family: var(--font-family);
+   font-weight: 400;
+   font-size: 16px;
+   margin-bottom: 24px;
+   margin-left: 8px;
+   line-height: 150%;
+}
+
+.author {
+   font-family: var(--font-family);
+   font-size: 14px;
+   font-weight: 500;
+   margin-bottom: 32px;
+   margin-left: 8px;
+}
+
+.photoWrapper {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+
+.photo {
+   border-radius: 16px;
+   object-fit: cover;
+   height: 262px;
+   width: 343px;
+}
+
+/* Navigate */
+.reviews :global(.slick-slider) {
+   position: relative;
+   padding-bottom: 40px;
+}
+
+
+.reviews :global(.slick-prev),
+.reviews :global(.slick-next) {
+   position: absolute !important;
+   bottom: 8px !important;
+   top: auto !important;
+   transform: none !important;
+   z-index: 2;
+}
+
+
+.reviews :global(.slick-dots) {
+   bottom: 15px;
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+   gap: 8px;
+}
+
+.reviews :global(.slick-dots li) {
+   width: 8px;
+   height: 8px;
+   margin: 0;
+}
+
+.reviews :global(.slick-dots li button) {
+   width: 8px;
+   height: 8px;
+   padding: 0;
+}
+
+.reviews :global(.slick-dots li button:before) {
+   content: "";
+   width: 8px;
+   height: 8px;
+   display: block;
+   border-radius: 50%;
+   border: 1px solid var(--white);
+   opacity: 1;
+   transition: background-color 0.3s, border-color 0.3s;
+}
+
+.reviews :global(.slick-dots li.slick-active button:before) {
+   background-color: var(--white);
+   border-color: var(--white);
+}
+
+.reviews :global(.slick-prev:before),
+.reviews :global(.slick-next:before) {
+   content: none;
+}
+
+.reviews :global(.slick-prev) {
+   left: 10px;
+}
+
+.reviews :global(.slick-next) {
+   right: 10px;
+}
