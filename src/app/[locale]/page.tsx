@@ -4,6 +4,7 @@ import Reviews from "@/components/Sections/Reviews/Reviews";
 import { Locale } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { Portfolio } from "@/components/Sections/Portfolio/Portfolio";
+import Contacts from "@/components/Sections/Contacts/Contacts";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -21,6 +22,7 @@ export default async function IndexPage({ params }: Props) {
       <About />
       <Portfolio />
       <Reviews />
+      <Contacts />
     </>
   );
 }
