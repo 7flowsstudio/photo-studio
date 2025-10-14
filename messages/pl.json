@@ -25,6 +25,15 @@
   "Reviews": {
     "title": "Co mówią moi klienci"
   },
+
+  "Blog": {
+    "title": "Trochę przydatne",
+    "details": "Na blogu dzielę się wskazówkami, spostrzeżeniami zza kulis i inspiracjami, dzięki którym poczujesz się pewniej przed kamerą i lepiej zrozumiesz moją pracę.",
+    "readMore": "Czytać",
+    "viewAll": "Zobacz wszystkie",
+    "showLess": "Pokaż mniej"
+  },
+
   "LocaleLayout": {
     "title": "kobryn-photo.website",
     "description": "Fotografia, która pracuje dla Ciebie"

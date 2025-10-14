@@ -1,0 +1,18 @@
+import NotFoundPage from '@/components/NotFoundPage';
+import PostPhotoshootPrep from "@/components/Sections/Blog/Posts/PostPhotoshootPrep/PostPhotoshootPrep";
+import PostPhotographyBusiness from "@/components/Sections/Blog/Posts/PostPhotographyBusiness/PostPhotographyBusiness";
+import PostBusinessPortrait from "@/components/Sections/Blog/Posts/PostBusinessPortrait/PostBusinessPortrait";
+
+const postsMap: Record<string, React.FC> = {
+  "pidgotovka-do-fotosesiyi": PostPhotoshootPrep,
+  "fotografiya-dlya-biznesu": PostPhotographyBusiness,
+  "post-3": PostPhotographyBusiness,
+  "diloviy-portret": PostBusinessPortrait,
+  "post-5": PostBusinessPortrait,
+};
+
+export default function SinglePost({ params }: { params: { slug: string } }) {
+  const PostComponent = postsMap[params.slug];
+  if (!PostComponent) return <NotFoundPage />
+  return <PostComponent />;
+}
