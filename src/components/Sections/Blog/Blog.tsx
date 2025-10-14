@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { blogPosts } from "./data/posts";
+import { blogPosts } from "@/lib/collections/posts";
 import Card from "./Card/Card";
 
 import styles from "./Blog.module.css";

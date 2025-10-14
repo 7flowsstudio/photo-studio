@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Slider from "react-slick";
 import Image from "next/image";
 import CustomArrow from "./CustomArrow/CustomArrow";
-import { reviews } from "./data/reviews";
+import { reviews } from "@/lib/collections/reviews";
 import styles from "./Reviews.module.css";
 
 import "slick-carousel/slick/slick.css";
