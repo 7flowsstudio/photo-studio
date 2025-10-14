@@ -15,3 +15,10 @@ export type Review = {
   author: string;
   role: string;
 };
+
+export type Item = {
+	id: string;
+	category: string;
+	url: string;
+	alt: string;
+};

@@ -26,11 +26,12 @@
 .content {
 
    color: var(--white);
-   width: 342px;
+   min-width: 342px;
+   width: 100%;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   margin-left: 16px;
+   padding: 0 16px;
    gap: 12px;
 }
 
@@ -79,33 +80,16 @@
    text-align: center;
 }
 
-@media screen and (min-width: 395px) {
-   .content {
-      padding: 10px;
-      max-width: 342px;
-      width: 90%;
-   }
-}
-
 @media screen and (min-width: 412px) {
    .hero {
       background-position: 20% 98%;
       background-size: 117%;
-   }
-
-   .content {
-      width: 90%;
    }
 }
 
 @media screen and (min-width: 578px) {
    .hero {
       background-position: 20% 78%;
-   }
-
-   .content {
-      max-width: 670px;
-      width: 100%;
    }
 }
 
