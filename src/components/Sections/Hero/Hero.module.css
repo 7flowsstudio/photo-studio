@@ -24,6 +24,7 @@
 }
 
 .content {
+
    color: var(--white);
    width: 342px;
    display: flex;
@@ -128,8 +129,11 @@
    }
 
    .wrapperInfo {
-      padding: 0;
       justify-content: center;
+      max-width: 1116px;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
    }
 
    .content {
@@ -162,14 +166,12 @@
 }
 
 @media screen and (min-width: 1280px) {
+   .wrapperInfo {
+      padding-top: 140px;
+   }
+
    .hero {
       background-position-x: right;
       background-position-y: top;
-   }
-}
-
-@media screen and (min-width: 1440px) {
-   .wrapperInfo {
-      margin-left: 260px;
    }
 }

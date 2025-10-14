@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.wrapperInfo}>
-        <div className={`${styles.content} container`}>
+        <div className={styles.content}>
           <span className={`${styles.bage} ${styles.desktop}`}>
             {t("bage")}
           </span>
