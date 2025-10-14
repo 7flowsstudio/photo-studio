@@ -22,3 +22,11 @@ export type Item = {
 	url: string;
 	alt: string;
 };
+
+export type CardText = {
+  id: number,
+  slug: string,
+  title: string,
+  text: string,
+  image: string
+}
