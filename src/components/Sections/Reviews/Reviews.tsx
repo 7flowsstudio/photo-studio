@@ -22,34 +22,54 @@ const Reviews = () => {
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
     adaptiveHeight: true,
     nextArrow: <CustomArrow direction="next" />,
     prevArrow: <CustomArrow direction="prev" />,
   };
 
   return (
-    <section className={styles.reviews}>
-      <h2 className={styles.title}>{t("title")}</h2>
-      <Slider {...settings}>
-        {currentReviews.map((r, i) => (
-          <div key={i} className={styles.slide}>
-            <p className={styles.text}>{r.text}</p>
-            <p className={styles.author}>
-              — {r.author}, <span>{r.role}</span>
-            </p>
-            <div className={styles.photoWrapper}>
-              <Image
-                src={r.photo}
-                alt={r.author}
-                width={343}
-                height={262}
-                className={styles.photo}
-              />
-            </div>
+    <section id="reviews" className={styles.reviews}>
+      <div className={styles.container}>
+        <div className={styles.wrap}>
+          <div className={styles.wrapInfo}>
+            <h2 className={styles.title}>{t("title")}</h2>
+
+            <Slider {...settings} className={styles.slider}>
+              {currentReviews.map((r, i) => (
+                <div key={i} className={styles.slideWrapper}>
+                  <div className={styles.textWrapper}>
+                    <p className={styles.text}>{r.text}</p>
+                    <p className={styles.author}>
+                      — {r.author}, <span>{r.role}</span>
+                    </p>
+                  </div>
+
+                  <div className={styles.photoWrapper}>
+                    <Image
+                      src="/img/reviews/photo.jpg"
+                      alt="Photo"
+                      width={343}
+                      height={262}
+                      className={styles.photo}
+                    />
+                  </div>
+                </div>
+              ))}
+            </Slider>
           </div>
-        ))}
-      </Slider>
+
+          <Image
+            src="/img/reviews/photo.jpg"
+            alt="Photo"
+            width={443}
+            height={330}
+            className={styles.photoDesktop}
+          />
+        </div>
+      </div>
     </section>
   );
 };

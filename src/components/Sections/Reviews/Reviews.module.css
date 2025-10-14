@@ -3,8 +3,17 @@
    color: var(--white);
    padding: 40px 16px;
    text-align: left;
-   max-width: 480px;
+}
+
+.container {
+   max-width: 1116px;
    margin: 0 auto;
+   padding: 0;
+   width: 100%;
+}
+
+.photoDesktop {
+   display: none;
 }
 
 .title {
@@ -16,18 +25,24 @@
    margin-bottom: 32px;
 }
 
-.slide {
+.slider {
    display: flex;
    flex-direction: column;
    align-items: center;
+}
+
+.textWrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+   margin-bottom: 32px;
+   padding: 0 8px;
 }
 
 .text {
    font-family: var(--font-family);
    font-weight: 400;
    font-size: 16px;
-   margin-bottom: 24px;
-   margin-left: 8px;
    line-height: 150%;
 }
 
@@ -40,16 +55,20 @@
 }
 
 .photoWrapper {
-   display: flex;
-   justify-content: center;
+   position: relative;
    width: 100%;
+   aspect-ratio: 4 / 3;
+   border-radius: 8px;
+   overflow: hidden;
 }
 
 .photo {
-   border-radius: 16px;
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
    object-fit: cover;
-   height: 262px;
-   width: 343px;
+   object-position: 50% 30%;
 }
 
 /* Navigate */
@@ -116,4 +135,102 @@
 
 .reviews :global(.slick-next) {
    right: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+   .reviews {
+      padding: 61px 16px;
+   }
+
+   .slider {
+      flex-direction: row;
+      width: 552px;
+   }
+
+   .wrap {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .wrapInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+   }
+
+   .title {
+      text-align: left;
+   }
+
+   .textWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 150px;
+      margin-bottom: 16px;
+   }
+
+   .text {
+      min-width: 320px;
+      width: 100%;
+   }
+
+   .photoWrapper {
+      display: none;
+   }
+
+   .photoDesktop {
+      display: block;
+      object-fit: cover;
+      width: 343px;
+      height: 262px;
+      border-radius: 8px;
+      object-position: 50% 28%;
+   }
+
+   .sliderWrapper {
+      height: 268;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+   }
+}
+
+@media screen and (min-width: 1280px) {
+   .slider {
+      width: 552px;
+   }
+
+   .title {
+      text-align: left;
+      font-size: 40px;
+   }
+
+   .textWrapper {
+
+      height: 200px;
+
+      margin-bottom: 36px;
+   }
+
+   .text {
+      font-size: 18px;
+      width: 536px;
+   }
+
+   .photoDesktop {
+
+      width: 433px;
+      height: 330px;
+
+   }
+
+   .reviews :global(.slick-slider) {
+      height: 258px;
+
+   }
 }

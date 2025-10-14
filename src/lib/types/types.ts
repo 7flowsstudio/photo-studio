@@ -14,5 +14,4 @@ export type Review = {
   text: string;
   author: string;
   role: string;
-  photo: string;
 };
