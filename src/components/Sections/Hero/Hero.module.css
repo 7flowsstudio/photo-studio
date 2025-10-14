@@ -24,6 +24,7 @@
 }
 
 .content {
+
    color: var(--white);
    min-width: 342px;
    width: 100%;
@@ -112,8 +113,11 @@
    }
 
    .wrapperInfo {
-      padding: 0;
       justify-content: center;
+      max-width: 1116px;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
    }
 
    .content {
@@ -146,6 +150,10 @@
 }
 
 @media screen and (min-width: 1280px) {
+   .wrapperInfo {
+      padding-top: 140px;
+   }
+
    .hero {
       background-position-x: right;
       background-position-y: top;

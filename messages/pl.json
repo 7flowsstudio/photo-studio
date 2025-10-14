@@ -22,7 +22,9 @@
     "text": "Jestem fotografką ze Świnoujścia. Od ponad 5 lat fotografuję ludzi i marki tak, aby w kadrze pozostało nie tylko piękno, ale i prawdziwe emocje.",
     "details": "Wśród moich klientów są Biedronka, Martes Sport, Solar i inne firmy oraz startupy."
   },
-
+  "Reviews": {
+    "title": "Co mówią moi klienci"
+  },
   "LocaleLayout": {
     "title": "kobryn-photo.website",
     "description": "Fotografia, która pracuje dla Ciebie"

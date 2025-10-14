@@ -22,7 +22,9 @@
     "text": "I’m a photographer based in Świnoujście. For over 5 years, I’ve been helping people and brands capture not just beauty, but real emotion in every frame.",
     "details": "My clients include Biedronka, Martes Sport, Solar, and other companies and startups."
   },
-
+  "Reviews": {
+    "title": "What my clients say"
+  },
   "LocaleLayout": {
     "title": "kobryn-photo.website",
     "description": "Photography that works for you"
