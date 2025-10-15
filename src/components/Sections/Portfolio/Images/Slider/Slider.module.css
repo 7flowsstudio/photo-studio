@@ -1,0 +1,40 @@
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    width: 16px;
+    height: 16px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.leftBtn {
+    left: -2px;
+}
+
+.rightBtn {
+    right: -2px;
+}
+
+.slider_list {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.slider_item {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+}
