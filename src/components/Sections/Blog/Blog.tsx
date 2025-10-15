@@ -16,25 +16,38 @@ const Blog = () => {
 
   return (
     <section id="blog" className={styles.blog}>
-      <div className={`${styles.useful} container`}>
-        <h2 className={styles.title}>{t("title")}</h2>
-        <p className={styles.details}>{t("details")}</p>
-      </div>
+        <div className={`${styles.useful} container`}>
+          <div className={styles.infoBlog}>
+            <div>
+          <h2 className={styles.title}>{t("title")}</h2>
+          <p className={styles.details}>{t("details")}</p>
+            </div>
+          {posts.length > 2 && (
+            <button
+              type="button"
+              onClick={() => setShowAll(!showAll)}
+              className={styles.buttonDesktop}
+            >
+              {showAll ? t("showLess") : t("viewAll")}
+            </button>
+          )}
+          </div>
 
-      <div className={styles.cardList}>
-        {displayedPosts.map((post) => (
-          <Card key={post.id} post={post} locale={locale} />
-        ))}
-      </div>
-      {posts.length > 2 && (
-        <button
-          type="button"
-          onClick={() => setShowAll(!showAll)}
-          className={styles.button}
-        >
-          {showAll ? t("showLess") : t("viewAll")}
-        </button>
-      )}
+          <div className={styles.cardList}>
+            {displayedPosts.map((post) => (
+              <Card key={post.id} post={post} locale={locale} />
+            ))}
+          </div>
+          {posts.length > 2 && (
+            <button
+              type="button"
+              onClick={() => setShowAll(!showAll)}
+              className={styles.buttonMobile}
+            >
+              {showAll ? t("showLess") : t("viewAll")}
+            </button>
+          )}
+        </div>
     </section>
   );
 };
