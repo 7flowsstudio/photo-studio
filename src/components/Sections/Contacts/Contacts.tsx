@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 const Contacts = () => {
-  const t = useTranslations("Contacts");
+  const t = useTranslations("Contacts.form");
   const {
     register,
     handleSubmit,
@@ -31,29 +31,41 @@ const Contacts = () => {
       onSubmit={handleSubmit(onSubmit)}
       style={{ maxWidth: 400, margin: "0 auto" }}
     >
-      <input
-        {...register("name", { required: "Введіть ім’я" })}
-        placeholder="Ваше ім’я"
-      />
-      {errors.name && <p>{errors.name.message}</p>}
+      <label>
+        {t("nameLabel")}
+        <input
+          {...register("name", { required: t("requiredName") })}
+          placeholder={t("namePlaceholder")}
+        />
+        {errors.name && <p>{errors.name.message}</p>}
+      </label>
 
-      <input
-        {...register("number", {
-          required: "Введіть номер телефону",
-          pattern: { value: /^[0-9+\s-]+$/, message: "Некоректний номер" },
-        })}
-        placeholder="Номер телефону"
-      />
-      {errors.number && <p>{errors.number.message}</p>}
+      <label>
+        {t("numberLabel")}
+        <input
+          {...register("number", {
+            required: t("requiredNumber"),
+            pattern: { value: /^[0-9+\s-]+$/, message: t("invalidNumber") },
+          })}
+          placeholder={t("numberPlaceholder")}
+        />
+        {errors.number && <p>{errors.number.message}</p>}
+      </label>
 
-      <textarea {...register("message")} placeholder="Повідомлення" />
+      <label>
+        {t("messageLabel")}
+        <textarea
+          {...register("message")}
+          placeholder={t("messagePlaceholder")}
+        />
+      </label>
 
       <button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Відправка..." : "Відправити"}
+        {isSubmitting ? t("sending") : t("submit")}
       </button>
 
-      {status === "success" && <p>✅ Заявку надіслано!</p>}
-      {status === "error" && <p>❌ Помилка при надсиланні.</p>}
+      {status === "success" && <p>{t("success")}</p>}
+      {status === "error" && <p>{t("error")}</p>}
     </form>
   );
 };
