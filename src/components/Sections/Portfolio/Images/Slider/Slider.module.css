@@ -1,9 +1,11 @@
 .slider {
     position: relative;
+    width: 100%;
 }
 
 .viewport {
     overflow: hidden;
+    width: 100%;
 }
 
 .slider_btn {
@@ -33,9 +35,9 @@
 .slider_list {
     display: flex;
     will-change: transform;
+    width: 100%;
 
     @media screen and (min-width: 768px) {
-
         gap: 24px;
     }
 }
@@ -43,4 +45,8 @@
 .slider_item {
     flex: 0 0 100%;
     min-width: 0;
+
+    @media screen and (min-width: 768px) {
+        flex: 0 0 calc((100% - 3 * 24px) / 4);
+    }
 }

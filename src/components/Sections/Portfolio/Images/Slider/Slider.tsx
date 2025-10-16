@@ -64,7 +64,10 @@ export const Slider = ({images}: SliderProps) => {
                 <ul className={s.slider_list}>
                     {images.map((item) => (
                         <li key={item.id} className={s.slider_item}>
-                            <ImageCard url={item.url} alt={t(item.alt)} onClick={() => {}} />
+                            <ImageCard
+                                url={item.url}
+                                alt={t(item.alt)}
+                                onClick={() => {}} />
                         </li>
                     ))}
                 </ul>
@@ -74,7 +77,7 @@ export const Slider = ({images}: SliderProps) => {
                 type="button"
                 onClick={scrollNext}
                 className={`${s.slider_btn} ${s.rightBtn}`}
-                disabled={!emblaApi || !canScrollPrev}
+                disabled={!emblaApi || !canScrollNext}
             >
                 ›
             </button>

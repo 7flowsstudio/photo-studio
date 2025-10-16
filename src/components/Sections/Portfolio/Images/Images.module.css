@@ -1,10 +1,11 @@
 .gridWrapper {
-
+    width: 100%;
 }
 
 .sliderWrapper {
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .image_list {

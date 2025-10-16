@@ -10,12 +10,14 @@ type Props = {
 
 export const ImageCard = ({url, alt, onClick}:Props) => {
     return (
-        <div className={s.card} onClick={onClick}>
+        <div onClick={onClick}>
             <Image
                 src={url}
                 alt={alt}
-                fill
-                sizes="(max-width: 767px) 100vw, (min-width: 768px) 100vw"
+                width={343}
+                height={468}
+                sizes="(max-width: 768px) 318px, 343px"
+                style={{ width: "100%", height: "100%" }}
                 className={s.photo}
             />
         </div>
