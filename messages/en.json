@@ -77,19 +77,19 @@
   },
   "Contacts": {
     "form": {
-      "nameLabel": "ПІБ",
-      "namePlaceholder": "Ваше ім’я",
-      "numberLabel": "Телефон",
+      "nameLabel": "Full name",
+      "namePlaceholder": "Your name",
+      "numberLabel": "Phone",
       "numberPlaceholder": "+48",
-      "messageLabel": "Коментар",
-      "messagePlaceholder": "Тут можна залишити побажання чи уточнення",
-      "submit": "НАДІСЛАТИ ЗАЯВКУ",
-      "sending": "Надсилання...",
-      "success": "✅ Заявку надіслано!",
-      "error": "❌ Помилка при надсиланні.",
-      "requiredName": "Введіть ім’я",
-      "requiredNumber": "Введіть номер телефону",
-      "invalidNumber": "Некоректний номер"
+      "messageLabel": "Comment",
+      "messagePlaceholder": "You can leave your wishes or details here",
+      "submit": "SEND REQUEST",
+      "sending": "Sending...",
+      "success": "✅ Request has been sent!",
+      "error": "❌ Error while sending.",
+      "requiredName": "Please enter your name",
+      "requiredNumber": "Please enter your phone number",
+      "invalidNumber": "Invalid phone number"
     }
   },
   "LocaleLayout": {
