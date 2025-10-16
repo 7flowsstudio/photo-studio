@@ -33,7 +33,23 @@
     "viewAll": "View all",
     "showLess": "Show less"
   },
-
+  "Contacts": {
+    "form": {
+      "nameLabel": "ПІБ",
+      "namePlaceholder": "Ваше ім’я",
+      "numberLabel": "Телефон",
+      "numberPlaceholder": "+48",
+      "messageLabel": "Коментар",
+      "messagePlaceholder": "Тут можна залишити побажання чи уточнення",
+      "submit": "НАДІСЛАТИ ЗАЯВКУ",
+      "sending": "Надсилання...",
+      "success": "✅ Заявку надіслано!",
+      "error": "❌ Помилка при надсиланні.",
+      "requiredName": "Введіть ім’я",
+      "requiredNumber": "Введіть номер телефону",
+      "invalidNumber": "Некоректний номер"
+    }
+  },
   "LocaleLayout": {
     "title": "kobryn-photo.website",
     "description": "Photography that works for you"
