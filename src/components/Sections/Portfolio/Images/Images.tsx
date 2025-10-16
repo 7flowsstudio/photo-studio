@@ -19,7 +19,6 @@ export const Images = ({items, category, expanded}: PhotoProps) => {
     const t = useTranslations("Portfolio");
     const filtered = useMemo(() => items.filter(item => item.category === category), [items, category]);
     const visible = expanded ? filtered : filtered.slice(0, 4);
-    // const hasMore = visibleCount < filtered.length;
 
     if (filtered.length === 0) {
         return <p className={s.placeholder}>{t("noPhotos")}</p>
