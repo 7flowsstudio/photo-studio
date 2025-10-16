@@ -85,19 +85,19 @@
   },
   "Contacts": {
     "form": {
-      "nameLabel": "ПІБ",
-      "namePlaceholder": "Ваше ім’я",
-      "numberLabel": "Телефон",
+      "nameLabel": "Imię i nazwisko",
+      "namePlaceholder": "Twoje imię",
+      "numberLabel": "Telefon",
       "numberPlaceholder": "+48",
-      "messageLabel": "Коментар",
-      "messagePlaceholder": "Тут можна залишити побажання чи уточнення",
-      "submit": "НАДІСЛАТИ ЗАЯВКУ",
-      "sending": "Надсилання...",
-      "success": "✅ Заявку надіслано!",
-      "error": "❌ Помилка при надсиланні.",
-      "requiredName": "Введіть ім’я",
-      "requiredNumber": "Введіть номер телефону",
-      "invalidNumber": "Некоректний номер"
+      "messageLabel": "Komentarz",
+      "messagePlaceholder": "Tutaj możesz zostawić życzenia lub uwagi",
+      "submit": "WYŚLIJ ZGŁOSZENIE",
+      "sending": "Wysyłanie...",
+      "success": "✅ Zgłoszenie zostało wysłane!",
+      "error": "❌ Błąd podczas wysyłania.",
+      "requiredName": "Wpisz imię",
+      "requiredNumber": "Wpisz numer telefonu",
+      "invalidNumber": "Nieprawidłowy numer"
     }
   },
   "LocaleLayout": {
