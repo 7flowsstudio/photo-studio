@@ -92,6 +92,14 @@
       "invalidNumber": "Invalid phone number"
     }
   },
+  "Blog": {
+    "title": "Some useful insight",
+    "details": "On my blog I share tips, behind-the-scenes stories, and inspiration to help you feel more confident in front of the camera and understand my approach to photography.",
+    "readMore": "Read",
+    "viewAll": "View all",
+    "showLess": "Show less"
+  },
+
   "LocaleLayout": {
     "title": "kobryn-photo.website",
     "description": "Photography that works for you"

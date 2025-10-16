@@ -1,0 +1,115 @@
+import { CardText } from "@/lib/types/types";
+
+export const blogPosts: Record<string, CardText[]> = {
+  ua: [
+    {
+      id: 1,
+      slug: "pidgotovka-do-fotosesiyi",
+      title: "Як підготуватися до фотосесії",
+      text: "Кілька простих порад, які допоможуть клієнтам почуватися впевнено перед камерою та отримати саме ті кадри, які вони хочуть.",
+      image: "/img/blog/post1.jpg",
+    },
+    {
+      id: 2,
+      slug: "fotografiya-dlya-biznesu",
+      title: "Фотографія як інструмент для бізнесу",
+      text: "Про те, як якісні фото можуть підвищити довіру до бренду, виділити продукт серед конкурентів і реально вплинути на продажі.",
+      image: "/img/blog/post2.jpg",
+    },
+    {
+      id: 3,
+      slug: "post-3",
+      title: "Фотографія як інструмент для бізнесу",
+      text: "Про те, як якісні фото можуть підвищити довіру до бренду, виділити продукт серед конкурентів і реально вплинути на продажі.",
+      image: "/img/blog/post2.jpg",
+    },
+    {
+      id: 4,
+      slug: "diloviy-portret",
+      title: "Діловий портрет: що варто знати",
+      text: "Діловий портрет може сказати про вас більше, ніж слова. Дізнайтеся, як зробити його вашим найкращим інструментом успіху.",
+      image: "/img/blog/post3.jpg",
+    },
+    {
+      id: 5,
+      slug: "post-5",
+      title: "Діловий портрет: що варто знати",
+      text: "Діловий портрет може сказати про вас більше, ніж слова. Дізнайтеся, як зробити його вашим найкращим інструментом успіху.",
+      image: "/img/blog/post3.jpg",
+    },
+  ],
+  en: [
+    {
+      id: 1,
+      slug: "pidgotovka-do-fotosesiyi",
+      title: "How to Prepare for a Photoshoot",
+      text: "A few simple tips to help you feel at ease and get the exact shots you’re hoping for.",
+      image: "/img/blog/post1.jpg",
+    },
+    {
+      id: 2,
+      slug: "fotografiya-dlya-biznesu",
+      title: "Photography as a Business Tool",
+      text: "On how quality photos can build brand trust, make your product stand out, and truly impact sales.",
+      image: "/img/blog/post2.jpg",
+    },
+    {
+      id: 3,
+      slug: "post-3",
+      title: "Photography as a Business Tool",
+      text: "On how quality photos can build brand trust, make your product stand out, and truly impact sales.",
+      image: "/img/blog/post2.jpg",
+    },
+    {
+      id: 4,
+      slug: "diloviy-portret",
+      title: "Business portrait: what you should know",
+      text: "A business portrait can say more about you than words can. Learn how to make it your best tool for success.",
+      image: "/img/blog/post3.jpg",
+    },
+    {
+      id: 5,
+      slug: "post-5",
+      title: "Business portrait: what you should know",
+      text: "A business portrait can say more about you than words can. Learn how to make it your best tool for success.",
+      image: "/img/blog/post3.jpg",
+    },
+  ],
+  pl: [
+    {
+      id: 1,
+      slug: "pidgotovka-do-fotosesiyi",
+      title: "Jak przygotować się do sesji zdjęciowej",
+      text: "Kilka prostych wskazówek, które pomogą klientom poczuć się pewnie przed aparatem i uzyskać dokładnie takie zdjęcia, jakich chcą.",
+      image: "/img/blog/post1.jpg",
+    },
+    {
+      id: 2,
+      slug: "fotografiya-dlya-biznesu",
+      title: "Fotografia jako narzędzie biznesu",
+      text: "O tym, w jaki sposób wysokiej jakości zdjęcia mogą zwiększyć zaufanie do marki, wyróżnić produkt na tle konkurencji i mieć realny wpływ na sprzedaż.",
+      image: "/img/blog/post2.jpg",
+    },
+    {
+      id: 3,
+      slug: "post-3",
+      title: "Fotografia jako narzędzie biznesu",
+      text: "O tym, w jaki sposób wysokiej jakości zdjęcia mogą zwiększyć zaufanie do marki, wyróżnić produkt na tle konkurencji i mieć realny wpływ na sprzedaż.",
+      image: "/img/blog/post2.jpg",
+    },
+    {
+      id: 4,
+      slug: "diloviy-portret",
+      title: "Portret biznesowy: co warto wiedzieć",
+      text: "Portret biznesowy może powiedzieć o Tobie więcej niż słowa. Dowiedz się, jak wykorzystać go jako narzędzie do osiągnięcia sukcesu.",
+      image: "/img/blog/post3.jpg",
+    },
+    {
+      id: 5,
+      slug: "post-5",
+      title: "Portret biznesowy: co warto wiedzieć",
+      text: "Portret biznesowy może powiedzieć o Tobie więcej niż słowa. Dowiedz się, jak wykorzystać go jako narzędzie do osiągnięcia sukcesu.",
+      image: "/img/blog/post3.jpg",
+    },
+  ],
+};
