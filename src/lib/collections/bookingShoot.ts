@@ -21,7 +21,7 @@ export const article: Record<string, BookingShoot> = {
     title: "Zrealizujmy twoje pomysły",
     details:
       "Fotografie, które oddają charakter i emocje — dla osób i marek, które chcą być autentyczne.",
-    button: "Zamów sesję zdjęciową",
+    button: "Zamów sesję",
     social: "Udostępnij",
   },
 };
