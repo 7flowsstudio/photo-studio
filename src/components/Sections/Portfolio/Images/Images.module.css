@@ -1,0 +1,29 @@
+.gridWrapper {
+    width: 100%;
+}
+
+.sliderWrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.image_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+}
+
+.image_item {
+
+}
+
+.placeholder {
+    text-align: center;
+    color: var(--grey-light);
+}

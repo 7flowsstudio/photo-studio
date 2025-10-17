@@ -26,6 +26,7 @@ export const Categories = ({selectedType, onSelect}:Props) => {
                             type="button"
                             aria-selected={isActive}
                             className={`${s.categories_item} ${isActive && s.active}`}
+                            onClick={() => onSelect(category.type)}
                         >
                             {category.name}
                         </button>
