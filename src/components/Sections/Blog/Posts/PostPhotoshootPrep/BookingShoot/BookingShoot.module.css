@@ -1,0 +1,63 @@
+.booking {
+   width: 100vw;
+   height: 428px;
+   background: linear-gradient(var(--overlay-2), var(--overlay-2)),
+      url('/img/blog/background.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.info {
+   padding: 29px 18px 88px 16px;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+.title {
+   font-family: var(--second-family);
+   font-weight: 600;
+   font-size: 24px;
+   text-transform: uppercase;
+   color: var(--white);
+}
+
+.details {
+   font-family: var(--second-family);
+   font-weight: 400;
+   font-size: 18px;
+   color: var(--white);
+}
+
+.button {
+   color: var(--black);
+   background: var(--gold);
+   font-family: var(--second-family);
+   font-weight: 500;
+   font-size: 18px;
+   text-transform: uppercase;
+   padding: 13.5px 78.5px;
+   border-radius: 8px;
+   text-align: center;
+   display: block;
+   margin-left: 16px;
+   margin-right: 16px;
+}
+
+.socialList {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+   margin-top: 16px;
+   margin-bottom: 40px;
+}
+
+.socialList span {
+   color: var(--white);
+   font-family: var(--font-family);
+   font-weight: 400;
+   font-size: 16px;
+   margin-right: 8px;
+}

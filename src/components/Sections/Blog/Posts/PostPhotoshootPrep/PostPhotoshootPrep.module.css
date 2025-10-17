@@ -1,0 +1,47 @@
+.info {
+   padding: 140px 16px 32px 16px;
+}
+
+.title {
+   font-family: var(--second-family);
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 120%;
+   text-transform: uppercase;
+   color: var(--black);
+   margin-bottom: 16px;
+}
+
+.details {
+   font-family: var(--font-family);
+   font-weight: 400;
+   font-size: 16px;
+   color: var(--black);
+}
+
+.image {
+   display: block;
+   margin: auto;
+   width: 100vw;
+}
+
+.adviceList {
+   padding: 35px 16px;
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+}
+
+.adviceTitle {
+   font-family: var(--second-family);
+   font-weight: 600;
+   font-size: 18px;
+   color: var(--black);
+   margin-bottom: 8px;
+}
+
+.adviceDetails {
+   font-family: var(--font-family);
+   font-weight: 400;
+   font-size: 16px;
+}

@@ -17,16 +17,35 @@ export type Review = {
 };
 
 export type Item = {
-	id: string;
-	category: string;
-	url: string;
-	alt: string;
+  id: string;
+  category: string;
+  url: string;
+  alt: string;
 };
 
 export type CardText = {
-  id: number,
-  slug: string,
-  title: string,
-  text: string,
-  image: string
-}
+  id: number;
+  slug: string;
+  title: string;
+  text: string;
+  image: string;
+};
+
+export type Advice = {
+  id: number;
+  title: string;
+  details: string;
+};
+
+export type Article = {
+  title: string;
+  details: string;
+  advice: Advice[];
+};
+
+export type BookingShoot = {
+  title: string;
+  details: string;
+  button: string;
+  social: string;
+};
