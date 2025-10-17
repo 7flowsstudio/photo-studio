@@ -75,6 +75,133 @@
     "noPhotos": "Поки що тут немає фото цієї категорії.",
     "loadMoreBtn": "Переглянути всі"
   },
+
+  "Prices": {
+    "title": "Пакети послуг",
+    "packages": [
+      {
+        "id": "mini",
+        "name": "Mini",
+        "description": "Блискавична консультація — і ти вже в кадрі",
+        "list": [
+          {
+            "text":"30 хв на зйомку",
+            "icon": "/img/icons/camera.svg"
+          },
+          {
+            "text":"10 фото в авторській обробці",
+            "icon": "/img/icons/photos.svg"
+          },
+          {
+            "text":"Галерея онлайн",
+            "icon": "/img/icons/images.svg"
+          },
+          {
+            "text":"Обробка за 3 днi",
+            "icon": "/img/icons/additor.svg"
+          },
+          {
+            "text":"Ідеально для профілю, меморіальних сімейних моментів.",
+            "icon": "/img/icons/check.svg"
+          }
+        ],
+        "price": "1200 ₴"
+      },
+      {
+        "id":"standard",
+        "name": "Standard",
+        "description": "Твоя ідея + мій стиль = влучний результат, який не змусить чекати довго",
+        "list": [
+          {
+            "text":"Година м’якої атмосфери",
+            "icon": "/img/icons/camera.svg"
+          },
+          {
+            "text":"30+ художніх кадрів,  +15 фото на наступний день",
+            "icon": "/img/icons/photos.svg"
+          },
+          {
+            "text":"Допомога з позами та локацією",
+            "icon": "/img/icons/location.svg"
+          }
+        ],
+        "price": "3500 ₴"
+      },
+      {
+        "id":"premium",
+        "name": "Premium",
+        "description": "Максимальний комфорт і результат \n“як у кіно”",
+        "list": [
+          {
+            "text":"До 2 годин зйомки",
+            "icon": "/img/icons/camera.svg"
+          },
+          {
+            "text":"60+ ретушованих фото",
+            "icon": "/img/icons/photos.svg"
+          },
+          {
+            "text":"Консультація щодо образу,  стиліст або студія",
+            "icon": "/img/icons/consultation.svg"
+          },
+          {
+            "text":"Обробка за 5 днів",
+            "icon": "/img/icons/additor.svg"
+          },
+          {
+            "text":"Підійде, якщо хочеш \n«все і зразу»",
+            "icon": "/img/icons/check.svg"
+          }
+        ],
+        "price": "1200 ₴"
+      },
+      {
+        "id":"events",
+        "name": "Репортаж / Події",
+        "description": "Антураж свят, рух, емоції — входять",
+        "list": [
+          {
+            "text":"Кожна наступна година +2500 ₴",
+            "icon": "/img/icons/money.svg"
+          },
+          {
+            "text":"Незалежно від формату — я ловлю момент.",
+            "icon": "/img/icons/smile.svg"
+          }
+        ],
+        "price": "3500 ₴"
+      },
+      {
+        "id":"additional",
+        "name": "Додатково",
+        "list": [
+          {
+            "text":"індивідуальні портрети",
+            "icon": "/img/icons/check.svg"
+          },
+          {
+            "text":"зйомки для бізнесу й стартапів",
+            "icon": "/img/icons/check.svg"
+          },
+          {
+            "text":"предметні фото для каталогу чи сайту",
+            "icon": "/img/icons/check.svg"
+          },
+          {
+            "text":"репортажі з подій",
+            "icon": "/img/icons/check.svg"
+          },
+          {
+            "text":"Спеціальні пакети для корпоративних замовників",
+            "icon": "/img/icons/check.svg"
+          }
+        ]
+      }
+    ],
+    "orderBtn": "Замовити зйомку"
+  },
+
+
   "Contacts": {
     "form": {
       "nameLabel": "Imię i nazwisko",
