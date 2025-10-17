@@ -1,5 +1,6 @@
 .blog {
    padding: 40px 16px;
+   display: block;
 }
 
 .useful {
@@ -46,12 +47,48 @@
    font-weight: 500;
 }
 
+@media screen and (min-width: 768px) {
+
+   .useful {
+      gap: 12px;
+      min-height: 636px;
+      height: auto;
+   }
+
+   .buttonDesktop:hover {
+      font-weight: 600;
+   }
+
+   .infoBlog {
+      width: 100%;
+      padding: 16px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+
+   }
+
+   .cardList {
+      margin: 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+
+}
+
 @media screen and (min-width: 1280px) {
 
    .useful {
       flex-direction: row;
       gap: 24px;
       height: 636px;
+      min-height: 636px;
+      height: auto;
+
    }
 
    .buttonDesktop {
@@ -67,22 +104,11 @@
       font-weight: 500;
    }
 
-   .buttonDesktop:hover {
-      font-weight: 600;
-   }
-
    .infoBlog {
       background-color: var(--grey);
       border-radius: 8px;
       flex: 0 0 550px;
-      width: 100%;
       padding: 32px;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: stretch;
-
    }
 
    .title {
@@ -99,11 +125,6 @@
    }
 
    .cardList {
-      margin: 0;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
       gap: 24px;
    }
-
 }
