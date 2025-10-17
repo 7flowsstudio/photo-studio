@@ -33,13 +33,12 @@
    background-color: var(--beige);
    border-bottom-left-radius: 8px;
    border-bottom-right-radius: 8px;
+   height: 256px;
    padding: 16px;
-   min-width: 320px;
    width: 100%;
    display: flex;
    flex-direction: column;
-   gap: 8px;
-   margin-bottom: 16px;
+   justify-content: space-between;
 }
 
 .title {
@@ -48,6 +47,7 @@
    color: var(--black);
    font-weight: 600;
    line-height: 150%;
+   margin-bottom: 8px;
 }
 
 .text {
@@ -92,17 +92,13 @@
       border-bottom-left-radius: 8px;
    }
 
-   .title {
-      margin-bottom: 8px;
-   }
-
    .postContainer {
       flex: 1;
       justify-content: space-between;
       padding: 24px 32px;
       border-bottom-left-radius: 0;
       border-top-right-radius: 8px;
-      max-width: 432px;
+      min-width: 320px;
       width: 100%;
       height: 100%;
    }
