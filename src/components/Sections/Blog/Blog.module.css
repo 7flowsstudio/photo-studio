@@ -59,15 +59,16 @@
 
 
 @media screen and (min-width: 1280px) {
+
    .cardList {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns:  549px 1fr;
       grid-auto-rows: 306px;
       gap: 24px;
    }
 
    .cardList.showAll {
-      grid-template-columns: auto 1fr;
+      grid-template-columns: 1fr 1fr;
    }
 
    .cardList:not(.showAll) .infoBlog {
