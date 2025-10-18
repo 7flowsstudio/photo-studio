@@ -1,3 +1,7 @@
+.post {
+   background: var(--background);
+}
+
 .info {
    padding: 145px 16px 32px 16px;
 }
@@ -17,7 +21,7 @@
    font-weight: 400;
    font-size: 16px;
    color: var(--black);
-   white-space: pre-line; 
+   white-space: pre-line;
 }
 
 .imageMobile {
