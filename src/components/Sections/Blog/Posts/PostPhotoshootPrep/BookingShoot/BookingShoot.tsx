@@ -11,7 +11,7 @@ const BookingShoot = () => {
 
   return (
     <section className={styles.booking}>
-      <div className="container">
+      <div className={styles.container}>
         <div className={styles.info}>
           <h2 className={styles.title}>{currentArticle.title}</h2>
           <p className={styles.details}>{currentArticle.details}</p>

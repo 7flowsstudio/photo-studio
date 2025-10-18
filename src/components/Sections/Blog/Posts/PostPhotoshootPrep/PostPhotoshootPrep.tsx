@@ -13,18 +13,29 @@ const PostPhotoshootPrep = () => {
   return (
     <>
       <section className={styles.post}>
-        <div className="container">
+        <div className={styles.container}>
           <div className={styles.info}>
             <h2 className={styles.title}>{currentArticle.title}</h2>
-            <p className={styles.details}>{currentArticle.details}</p>
+            <p style={{ whiteSpace: "pre-line" }} className={styles.details}>
+              {currentArticle.details}
+            </p>
           </div>
-          <Image
-            src="/img/blog/photo.jpg"
-            alt="photo"
-            width={375}
-            height={469}
-            className={styles.image}
-          />
+        </div>
+        <Image
+          src="/img/blog/photo.jpg"
+          alt="photo"
+          width={375}
+          height={469}
+          className={styles.imageMobile}
+        />
+        <Image
+          src="/img/blog/photoshoot-portrait.jpg"
+          alt="Photographer taking a portrait of a young woman in the studio"
+          width={1440}
+          height={427}
+          className={styles.imageDesktop}
+        />
+        <div className={styles.container}>
           <div className={styles.adviceList}>
             {currentArticle.advice.map((item) => (
               <div key={item.id} className={styles.adviceItem}>
