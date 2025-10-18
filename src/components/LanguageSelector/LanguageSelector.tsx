@@ -7,9 +7,13 @@ import styles from "./LanguageSelector.module.css";
 
 interface LanguageSelectorProps {
   scrolled?: boolean;
+  variant?: "light" | "dark";
 }
 
-const LanguageSelector: React.FC<LanguageSelectorProps> = ({ scrolled }) => {
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({
+  scrolled = false,
+  variant,
+}) => {
   const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
@@ -32,14 +36,13 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ scrolled }) => {
       router.push(`/${newLocale}${pathnameWithoutLocale}`);
     }
   };
+
   const toggleDropdown = () => setIsOpen(!isOpen);
 
+  const theme = variant ? variant : scrolled ? "dark" : "light";
+
   return (
-    <div
-      className={`${styles.dropdown} ${
-        scrolled ? styles.scrolledDropdown : ""
-      }`}
-    >
+    <div className={`${styles.dropdown} ${styles[theme]}`}>
       <button
         type="button"
         className={styles.dropdownButton}
