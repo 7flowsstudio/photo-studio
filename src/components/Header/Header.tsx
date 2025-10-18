@@ -6,47 +6,55 @@ import { useTranslations } from "next-intl";
 import styles from "./Header.module.css";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
+const menuItems = [
+  { key: "portfolio", href: "#portfolio" },
+  { key: "services", href: "#services" },
+  { key: "reviews", href: "#reviews" },
+  { key: "blog", href: "#blog" },
+  { key: "contacts", href: "#contacts" },
+];
+
 const Header = () => {
   const t = useTranslations("Header");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const handleClick = () => setMenuOpen(false);
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-    }
-  }, [menuOpen]);
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    document.documentElement.style.overflow = menuOpen ? "hidden" : "";
 
-  useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 250 && window.innerWidth >= 768) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 250 && window.innerWidth >= 768);
+
+      let current = "";
+      menuItems.forEach(({ href }) => {
+        const id = href.replace("#", "");
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop - 150;
+          if (window.scrollY >= top) current = href;
+        }
+      });
+      setActiveSection(current);
     };
 
+    const handleHashChange = () => {
+      setActiveSection(window.location.hash);
+    };
+
+    handleHashChange();
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("hashchange", handleHashChange);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const menuItems = [
-    { key: "portfolio", href: "#portfolio" },
-    { key: "services", href: "#services" },
-    { key: "reviews", href: "#reviews" },
-    { key: "blog", href: "#blog" },
-    { key: "contacts", href: "#contacts" },
-  ];
-
-  const handleClick = () => {
-    setMenuOpen(false);
-  };
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, [menuOpen]);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
@@ -60,7 +68,6 @@ const Header = () => {
               height={14}
               className={styles.logoMobileVersion}
             />
-
             <Image
               src={scrolled ? "/img/logo-black.svg" : "/img/logo.svg"}
               alt="logo"
@@ -73,7 +80,12 @@ const Header = () => {
             <ul className={styles.menuListDesktop}>
               {menuItems.map(({ key, href }) => (
                 <li key={key}>
-                  <a href={href}>{t(`menu.${key}`)}</a>
+                  <a
+                    href={href}
+                    className={activeSection === href ? styles.activeLink : ""}
+                  >
+                    {t(`menu.${key}`)}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -121,7 +133,11 @@ const Header = () => {
         <ul className={styles.menuList}>
           {menuItems.map(({ key, href }) => (
             <li key={key}>
-              <a href={href} onClick={handleClick}>
+              <a
+                href={href}
+                onClick={handleClick}
+                className={activeSection === href ? styles.activeLink : ""}
+              >
                 {t(`menu.${key}`)}
               </a>
             </li>

@@ -31,6 +31,11 @@
    font-weight: 500;
 }
 
+.buttonMobile:active {
+   color: var(--gold);
+   border-color: var(--gold);
+}
+
 .buttonDesktop {
    display: none;
 }
@@ -115,6 +120,11 @@
 
    .buttonDesktop:hover {
       font-weight: 600;
+   }
+
+   .buttonDesktop:active {
+      color: var(--gold);
+      border-color: var(--gold);
    }
 
    .buttonMobile {

@@ -27,6 +27,11 @@
    border: 1px solid var(--gold);
 }
 
+.activeLink {
+   color: var(--gold) !important;
+   border-bottom: 1px solid var(--gold) !important;
+}
+
 .desktop {
    display: flex;
    align-items: center;

@@ -68,6 +68,11 @@
    text-align: center;
 }
 
+.readMore:active {
+   color: var(--gold);
+   border-color: var(--gold);
+}
+
 @media screen and (min-width: 768px) {
    .card {
       flex-direction: row;
