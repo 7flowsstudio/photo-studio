@@ -16,9 +16,7 @@ const PostPhotoshootPrep = () => {
         <div className={styles.container}>
           <div className={styles.info}>
             <h2 className={styles.title}>{currentArticle.title}</h2>
-            <p style={{ whiteSpace: "pre-line" }} className={styles.details}>
-              {currentArticle.details}
-            </p>
+            <p className={styles.details}>{currentArticle.details}</p>
           </div>
         </div>
         <Image

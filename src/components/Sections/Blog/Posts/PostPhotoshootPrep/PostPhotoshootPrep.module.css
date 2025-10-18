@@ -17,6 +17,7 @@
    font-weight: 400;
    font-size: 16px;
    color: var(--black);
+   white-space: pre-line; 
 }
 
 .imageMobile {
