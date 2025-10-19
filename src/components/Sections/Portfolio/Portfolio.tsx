@@ -27,7 +27,7 @@ export const Portfolio = () => {
     }, [selectedCategory])
 
     return (
-        <section className={s.portfolio_section}>
+        <section id="portfolio" className={s.portfolio_section}>
             <h2 className={s.portfolio_title}>{t("title")}</h2>
             <Categories
                 selectedType={selectedCategory}
