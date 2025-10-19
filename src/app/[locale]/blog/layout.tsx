@@ -8,11 +8,11 @@ import BlogHeader from "@/components/BlogHeader/BlogHeader";
 
 type Props = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export default async function BlogLayout({ children, params }: Props) {
-  const { locale } = params;
+  const { locale } = await params;
 
   if (!isLocale(locale)) {
     notFound();
