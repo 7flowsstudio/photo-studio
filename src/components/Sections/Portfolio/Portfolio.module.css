@@ -1,4 +1,5 @@
 .portfolio_section {
+    scroll-margin-top: 60px;
     background-color: var(--black);
     color: var(--white);
 

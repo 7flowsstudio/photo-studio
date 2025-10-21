@@ -3,6 +3,7 @@
    color: var(--white);
    padding: 40px 16px;
    text-align: left;
+   scroll-margin-top: 60px;
 }
 
 .container {
