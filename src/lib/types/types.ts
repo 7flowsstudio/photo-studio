@@ -40,5 +40,11 @@ export type ServiceCard = {
     name: string,
     description?: string,
     list: Service[]
-    price?: string
+    price: string
+}
+
+export type AdditionalServices = {
+    name: string,
+    list: Service[],
+    image: string
 }
