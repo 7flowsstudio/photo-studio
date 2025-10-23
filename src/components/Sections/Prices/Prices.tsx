@@ -11,7 +11,7 @@ export const Prices = () => {
     const additional = (messages.Prices.additional ?? []) as AdditionalServices;
 
     return (
-        <section className={s.services_section}>
+        <section id="services" className={s.services_section}>
             <h2 className={s.services_title}>
                 {t("title")}
             </h2>

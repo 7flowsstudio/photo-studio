@@ -116,6 +116,7 @@
 @media screen and (min-width: 768px) {
    .reviews {
       padding: 61px 16px;
+      scroll-margin-top: 40px;
    }
 
    .slider {
@@ -186,6 +187,9 @@
 }
 
 @media screen and (min-width: 1280px) {
+   .reviews {
+      scroll-margin-top: 20px;
+   }
 
    .navigation {
       margin-top: 0;

@@ -61,6 +61,10 @@
 
 
 @media screen and (min-width: 768px) {
+   .blog {
+      scroll-margin-top: 40px;
+   }
+
    .details {
       text-align: center;
    }
@@ -69,7 +73,7 @@
 
 @media screen and (min-width: 1280px) {
    .blog {
-      scroll-margin-top: 30px;
+      scroll-margin-top: 20px;
    }
 
    .cardList {
