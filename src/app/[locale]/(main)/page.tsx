@@ -6,7 +6,7 @@ import { Locale } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { Portfolio } from "@/components/Sections/Portfolio/Portfolio";
 import Contacts from "@/components/Sections/Contacts/Contacts";
-import Prices from "@/components/Sections/Prices/Prices";
+import { Prices } from "@/components/Sections/Prices/Prices";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
