@@ -31,6 +31,25 @@ export type CardText = {
   image: string;
 };
 
+type Service = {
+    text: string,
+    icon: string,
+}
+
+export type ServiceCard = {
+    id: string,
+    name: string,
+    description?: string,
+    list: Service[]
+    price: string
+}
+
+export type AdditionalServices = {
+    name: string,
+    list: Service[],
+    image: string
+}
+
 export type Advice = {
   id: number;
   title: string;
@@ -49,3 +68,5 @@ export type BookingShoot = {
   button: string;
   social: string;
 };
+
+

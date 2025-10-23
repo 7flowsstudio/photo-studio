@@ -18,3 +18,19 @@
 .portfolio_title {
     margin-bottom: 32px;
 }
+
+.toggle_btn {
+    margin-top: 16px;
+    padding: 4px 8px;
+
+    border: none;
+    border-bottom: 1px solid var(--white);
+
+    background: none;
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+}

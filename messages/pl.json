@@ -26,6 +26,138 @@
     "title": "Co mówią moi klienci"
   },
 
+  "Portfolio": {
+    "title": "KILKA HISTORII W KADRZE",
+    "categories": [
+      { "type": "comercial", "name": "Sesje komercyjne dla marek" },
+      { "type": "portraits", "name": "Portrety do CV i social mediów" },
+      { "type": "catalogs", "name": "Fotografia produktowa do katalogów" },
+      { "type": "events", "name": "Reportaż z wydarzeń" }
+    ],
+    "photos": {
+      "portrait-01": {
+        "alt": "Kobieta z falowanymi włosami w czarnej, półprzezroczystej bluzce; studio."
+      },
+      "portrait-02": {
+        "alt": "Młody mężczyzna z potarganymi ciemnymi włosami i jasnoniebieskimi oczami, zbliżenie."
+      },
+      "portrait-03": {
+        "alt": "Uśmiechnięty mężczyzna w niebieskiej koszuli we wzory i czapce do tyłu, na zewnątrz."
+      },
+      "portrait-04": {
+        "alt": "Kobieta w kwiecistej bluzce siedzi na schodach i się uśmiecha."
+      },
+      "portrait-05": {
+        "alt": "Kobieta w czerwonym golfie śmieje się; rozmyte miejskie tło."
+      },
+      "portrait-06": {
+        "alt": "Osoba w chłodnym, niebiesko-fioletowym świetle, neutralny wyraz twarzy."
+      },
+      "portrait-07": {
+        "alt": "Młody mężczyzna z kręconymi blond włosami w czarnym kapeluszu i koszulce, miękkie dzienne światło."
+      },
+      "portrait-08": {
+        "alt": "Uśmiechnięty mężczyzna z ogoloną głową w kolorowej koszulce; biała ściana w tle."
+      },
+      "portrait-09": {
+        "alt": "Mężczyzna z półdługimi włosami i łańcuszkiem; jasne tło, lekki uśmiech."
+      },
+      "portrait-10": {
+        "alt": "Portret młodego mężczyzny z ciemnymi, kręconymi włosami i cienkim łańcuszkiem; ciepłe tło."
+      },
+      "portrait-11": {
+        "alt": "Nastrojowy portret kobiety z upiętymi włosami i masywnym naszyjnikiem; ciemne tło."
+      },
+      "portrait-12": {
+        "alt": "Kobieta z wysokim kokiem w białym topie, szeroki uśmiech; jasne tło."
+      }
+    },
+    "noPhotos": "W tej kategorii nie ma jeszcze zdjęć.",
+    "loadMoreBtn": "Zobacz wszystkie"
+  },
+  "Prices": {
+    "title": "Pakiety usług",
+    "packages": [
+      {
+        "id": "mini",
+        "name": "Mini",
+        "description": "Błyskawiczna konsultacja — i już jesteś w kadrze",
+        "list": [
+          { "text": "30 minut zdjęć", "icon": "/img/icons/camera.svg" },
+          { "text": "10 zdjęć w autorskiej obróbce", "icon": "/img/icons/photos.svg" },
+          { "text": "Galeria online", "icon": "/img/icons/images.svg" },
+          { "text": "Obróbka w 3 dni", "icon": "/img/icons/additor.svg" },
+          { "text": "Idealne do profilu i rodzinnych wspomnień.", "icon": "/img/icons/check.svg" }
+        ],
+        "price": "1200 ₴"
+      },
+      {
+        "id": "standard",
+        "name": "Standard",
+        "description": "Twój pomysł + mój styl = celny efekt bez długiego czekania",
+        "list": [
+          { "text": "Godzina przyjemnej atmosfery", "icon": "/img/icons/camera.svg" },
+          { "text": "30+ artystycznych kadrów, +15 zdjęć następnego dnia", "icon": "/img/icons/photos.svg" },
+          { "text": "Pomoc z pozowaniem i lokalizacją", "icon": "/img/icons/location.svg" }
+        ],
+        "price": "3500 ₴"
+      },
+      {
+        "id": "premium",
+        "name": "Premium",
+        "description": "Maksymalny komfort i efekt \n„jak w filmie”",
+        "list": [
+          { "text": "Do 2 godzin zdjęć", "icon": "/img/icons/camera.svg" },
+          { "text": "60+ retuszowanych zdjęć", "icon": "/img/icons/photos.svg" },
+          { "text": "Konsultacja stylizacji, stylista lub studio", "icon": "/img/icons/consultation.svg" },
+          { "text": "Obróbka w 5 dni", "icon": "/img/icons/additor.svg" },
+          { "text": "W sam raz, gdy chcesz \n„wszystko naraz”", "icon": "/img/icons/check.svg" }
+        ],
+        "price": "1200 ₴"
+      },
+      {
+        "id": "events",
+        "name": "Reportaż / Wydarzenia",
+        "description": "Oprawa świąt, ruch, emocje — w pakiecie",
+        "list": [
+          { "text": "Każda kolejna godzina +2500 ₴", "icon": "/img/icons/money.svg" },
+          { "text": "Niezależnie od formatu — łapię moment.", "icon": "/img/icons/smile.svg" }
+        ],
+        "price": "3500 ₴"
+      }
+    ],
+    "additional": {
+      "name": "Dodatkowo",
+      "list": [
+        { "text": "portrety indywidualne", "icon": "/img/icons/check.svg" },
+        { "text": "sesje dla firm i startupów", "icon": "/img/icons/check.svg" },
+        { "text": "zdjęcia produktowe do katalogu lub na stronę", "icon": "/img/icons/check.svg" },
+        { "text": "reportaże z wydarzeń", "icon": "/img/icons/check.svg" },
+        { "text": "specjalne pakiety dla klientów korporacyjnych", "icon": "/img/icons/check.svg" }
+      ],
+      "image": "/img/price/photo.jpg"
+    },
+    "orderBtn": "Zamów sesję"
+  },
+
+
+  "Contacts": {
+    "form": {
+      "nameLabel": "Imię i nazwisko",
+      "namePlaceholder": "Twoje imię",
+      "numberLabel": "Telefon",
+      "numberPlaceholder": "+48",
+      "messageLabel": "Komentarz",
+      "messagePlaceholder": "Tutaj możesz zostawić życzenia lub uwagi",
+      "submit": "WYŚLIJ ZGŁOSZENIE",
+      "sending": "Wysyłanie...",
+      "success": "✅ Zgłoszenie zostało wysłane!",
+      "error": "❌ Błąd podczas wysyłania.",
+      "requiredName": "Wpisz imię",
+      "requiredNumber": "Wpisz numer telefonu",
+      "invalidNumber": "Nieprawidłowy numer"
+    }
+  },
   "Blog": {
     "title": "Trochę przydatne",
     "details": "Na blogu dzielę się wskazówkami, spostrzeżeniami zza kulis i inspiracjami, dzięki którym poczujesz się pewniej przed kamerą i lepiej zrozumiesz moją pracę.",
