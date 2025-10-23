@@ -232,11 +232,9 @@
       font-size: 18px;
       display: flex;
       flex-direction: column;
-      align-items: last baseline;
    }
 
    .header {
-      /* background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.0444911) 13.94%, rgba(0, 0, 0, 0.417722) 81.25%, rgba(0, 0, 0, 0.46) 99.53%); */
       background: var(--background);
       padding-top: 22.5px;
       padding-bottom: 22.5px;
