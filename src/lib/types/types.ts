@@ -30,3 +30,21 @@ export type CardText = {
   text: string,
   image: string
 }
+
+type Service = {
+    text: string,
+    icon: string,
+}
+export type ServiceCard = {
+    id: string,
+    name: string,
+    description?: string,
+    list: Service[]
+    price: string
+}
+
+export type AdditionalServices = {
+    name: string,
+    list: Service[],
+    image: string
+}
