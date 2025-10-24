@@ -4,14 +4,20 @@
     align-items: center;
     justify-content: center;
     padding: 40px 16px;
+    scroll-margin-top: 60px;
 
     @media screen and (min-width: 768px) {
         padding: 60px 48px;
+        scroll-margin-top: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        scroll-margin-top: 20px;
     }
 }
 
 .services_title {
-   font-weight: 600;
+    font-weight: 600;
     line-height: 1.2;
     text-transform: uppercase;
     margin-bottom: 24px;
@@ -32,9 +38,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-                "pack pack"
-                "pack pack"
-                "additional additional"
+            "pack pack"
+            "pack pack"
+            "additional additional"
         ;
 
         gap: 24px
@@ -52,7 +58,7 @@
 .package_item {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
 
     padding: 16px;

@@ -11,17 +11,27 @@ const postsMap: Record<string, React.FC> = {
   "post-5": PostBusinessPortrait,
 };
 
+interface PostParams {
+  slug?: string;
+  locale?: string;
+}
+
 export default async function SinglePost({
   params,
 }: {
-  params: Promise<{ slug?: string; locale?: string }>;
+  params: Promise<PostParams>;
 }) {
-  const { slug = "" } = await params;
-  const PostComponent = postsMap[slug];
+  try {
+    const { slug } = await params;
 
-  if (!PostComponent) {
+    if (!slug || !postsMap[slug]) {
+      return notFound();
+    }
+
+    const PostComponent = postsMap[slug];
+    return <PostComponent />;
+  } catch (error) {
+    console.error("Error loading post:", error);
     return notFound();
   }
-
-  return <PostComponent />;
 }

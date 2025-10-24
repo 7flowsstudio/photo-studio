@@ -24,10 +24,8 @@
 }
 
 .content {
-
    color: var(--white);
-   min-width: 342px;
-   width: 100%;
+   width: 342px; 
    display: flex;
    flex-direction: column;
    align-items: flex-start;
@@ -95,12 +93,12 @@
 
 @media screen and (min-width: 768px) {
    .hero {
-      height: 100vh;
+      height: auto;
       background-size: cover;
       background-image:
          linear-gradient(270deg, rgba(0, 0, 0, 0) 39.24%, rgba(0, 0, 0, 0.8) 100%),
          url("/img/hero/background.png");
-      background-position: 60% 130%;
+      background-position: 75% 130%;
 
    }
 
@@ -121,7 +119,7 @@
    }
 
    .content {
-      max-width: 670px;
+      max-width: 424px;
       width: 100%;
       gap: 32px;
       justify-content: center;
@@ -135,7 +133,7 @@
    .btn.desktop {
       align-self: flex-start;
       margin-top: 32px;
-      padding: 16.5px 124.5px;
+      padding: 16.5px 100px;
    }
 
    .title {
@@ -150,6 +148,9 @@
 }
 
 @media screen and (min-width: 1280px) {
+   .hero {
+       height: 100vh;
+   }
    .wrapperInfo {
       padding-top: 140px;
    }
@@ -158,4 +159,9 @@
       background-position-x: right;
       background-position-y: top;
    }
+
+    .content {
+      max-width: 670px;
+   }
+
 }

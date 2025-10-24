@@ -28,7 +28,7 @@ const Contacts = () => {
   };
 
   return (
-    <div className={s.container}>
+    <div id="contacts" className={s.container}>
       <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
         <label className={s.contInput}>
           {t("nameLabel")}

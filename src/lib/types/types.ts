@@ -17,24 +17,25 @@ export type Review = {
 };
 
 export type Item = {
-	id: string;
-	category: string;
-	url: string;
-	alt: string;
+  id: string;
+  category: string;
+  url: string;
+  alt: string;
 };
 
 export type CardText = {
-  id: number,
-  slug: string,
-  title: string,
-  text: string,
-  image: string
-}
+  id: number;
+  slug: string;
+  title: string;
+  text: string;
+  image: string;
+};
 
 type Service = {
     text: string,
     icon: string,
 }
+
 export type ServiceCard = {
     id: string,
     name: string,
@@ -48,3 +49,24 @@ export type AdditionalServices = {
     list: Service[],
     image: string
 }
+
+export type Advice = {
+  id: number;
+  title: string;
+  details: string;
+};
+
+export type Article = {
+  title: string;
+  details: string;
+  advice: Advice[];
+};
+
+export type BookingShoot = {
+  title: string;
+  details: string;
+  button: string;
+  social: string;
+};
+
+

@@ -1,0 +1,114 @@
+.booking {
+   width: 100vw;
+   height: 428px;
+   background: linear-gradient(var(--overlay-2), var(--overlay-2)),
+      url('/img/blog/background.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.info {
+   padding: 29px 18px 88px 16px;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+.title {
+   font-family: var(--second-family);
+   font-weight: 600;
+   font-size: 24px;
+   text-transform: uppercase;
+   color: var(--white);
+}
+
+.details {
+   font-family: var(--second-family);
+   font-weight: 400;
+   font-size: 18px;
+   color: var(--white);
+   max-width: 335px;
+   width: 100%;
+}
+
+.button {
+   color: var(--black);
+   background: var(--gold);
+   font-family: var(--second-family);
+   font-weight: 500;
+   font-size: 18px;
+   text-transform: uppercase;
+   padding: 13.5px 65.5px;
+   border-radius: 8px;
+   text-align: center;
+   display: block;
+   margin-left: 16px;
+   margin-right: 16px;
+}
+
+.socialList {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+   margin-top: 16px;
+   margin-bottom: 40px;
+}
+
+.socialList span {
+   color: var(--white);
+   font-family: var(--font-family);
+   font-weight: 400;
+   font-size: 16px;
+   margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+   .booking {
+      height: 521px;
+      width: 100vw;
+      background-position: 50% 41%;
+      padding-top: 100px;
+      padding-bottom: 130px;
+   }
+
+   .info {
+      max-width: 690px;
+      width: 100%;
+      margin-bottom: 40px;
+      padding-bottom: 0;
+   }
+
+   .title {
+      font-size: 40px;
+   }
+
+   .details {
+      font-size: 24px;
+      max-width: 654px;
+      width: 100%;
+   }
+
+   .container {
+      max-width: 883px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 16px;
+   }
+
+   .button {
+      display: inline-block;
+   }
+
+   .button:hover {
+      background: #F3B433;
+      box-shadow: 0px 0px 14.5px 1px #F2D79F42;
+   }
+
+   .socialList {
+      justify-content: flex-start;
+      padding-left: 16px;
+      margin-top: 16px;
+   }
+}

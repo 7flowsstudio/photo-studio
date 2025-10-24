@@ -1,7 +1,8 @@
 import React from "react";
+import styles from "./PostPhotographyBusiness.module.css";
 
 const PostPhotographyBusiness = () => {
-  return <div>Post about business here...</div>;
+  return <div className={styles.section}>No content.</div>;
 };
 
 export default PostPhotographyBusiness;

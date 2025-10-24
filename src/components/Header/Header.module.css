@@ -14,26 +14,6 @@
    transition: padding 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-.header.scrolled a,
-.header.scrolled .btnDesktop {
-   color: var(--black);
-}
-
-.header.scrolled a:hover {
-   border-color: var(--black);
-}
-
-.header.scrolled .btnDesktop:hover {
-   border: 1px solid var(--gold);
-}
-
-.desktop {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   flex-wrap: nowrap;
-}
-
 .logoMobileVersion {
    display: block;
 }
@@ -89,6 +69,7 @@
    padding: 0;
    position: relative;
    z-index: 110;
+   background: var(--black);
 }
 
 .burger span {
@@ -102,7 +83,7 @@
 }
 
 .scrolledBurger span {
-   background: var(--black);
+   background: var(--white);
 }
 
 .burger.open span:nth-child(1) {
@@ -148,7 +129,7 @@
 }
 
 .scrolledMenu {
-   background: var(--background);
+   background: var(--black);
 }
 
 .menuList {
@@ -158,7 +139,7 @@
    align-items: center;
 }
 
-.btnMobile {
+/* .btnMobile {
    border: 1px solid var(--gold);
    text-transform: none;
    border-radius: 8px;
@@ -167,6 +148,19 @@
    padding: 13.5px 0;
    box-sizing: border-box;
    white-space: nowrap;
+} */
+
+.btnMobile {
+   color: var(--black);
+   background: var(--gold);
+   font-family: var(--second-family);
+   text-transform: none;
+   font-weight: 500;
+   font-size: 18px;
+   padding: 13.5px 78.5px;
+   width: 100%;
+   border-radius: 8px;
+   text-align: center;
 }
 
 .btnMobile:active {
@@ -175,6 +169,32 @@
 }
 
 @media (min-width: 768px) {
+
+   .header.scrolled a,
+   .header.scrolled .btnDesktop {
+      color: var(--black);
+   }
+
+   .header.scrolled a:hover {
+      border-color: var(--black);
+   }
+
+   .header.scrolled .btnDesktop:hover {
+      border: 1px solid var(--gold);
+   }
+
+   .activeLink {
+      color: var(--gold) !important;
+      border-bottom: 1px solid var(--gold) !important;
+   }
+
+   .desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+   }
+
    .logoMobileVersion {
       display: none;
    }

@@ -24,7 +24,7 @@ export const Portfolio = () => {
     const toggleExpanded =() => setExpanded(prev => !prev);
 
     return (
-        <section className={s.portfolio_section}>
+        <section id="portfolio" className={s.portfolio_section}>
             <h2 className={s.portfolio_title}>{t("title")}</h2>
 
             <Categories

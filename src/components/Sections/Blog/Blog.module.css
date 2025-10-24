@@ -1,12 +1,44 @@
 .blog {
    padding: 40px 16px;
+   background: var(--background);
+   scroll-margin-top: 60px;
+}
+
+.card {
+   padding-bottom: 20px;
 }
 
 .useful {
    display: flex;
    flex-direction: column;
    gap: 12px;
-   margin-bottom: 32px;
+}
+
+.cardList {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+.buttonMobile {
+   display: block;
+   margin: 24px auto 0;
+   background: transparent;
+   border: none;
+   color: var(--black);
+   text-decoration: underline;
+   font-family: var(--second-family);
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.buttonMobile:active {
+   color: var(--gold);
+   border-color: var(--gold);
+}
+
+.buttonDesktop {
+   display: none;
 }
 
 .title {
@@ -16,6 +48,7 @@
    font-weight: 600;
    font-family: var(--second-family);
    color: var(--black);
+   margin-bottom: 12px;
 }
 
 .details {
@@ -23,18 +56,97 @@
    font-weight: 400;
    font-size: 18px;
    color: var(--black);
+
 }
 
-.button {
-   display: block;
-   outline: none;
-   border: none;
-   margin: 0 auto;
-   background: transparent;
-   color: var(--black);
-   text-decoration: underline;
-   font-family: var(--second-family);
-   font-size: 18px;
-   font-weight: 500;
-   margin-top: 36px;
+
+@media screen and (min-width: 768px) {
+   .blog {
+      scroll-margin-top: 40px;
+   }
+
+   .details {
+      text-align: center;
+   }
+}
+
+
+@media screen and (min-width: 1280px) {
+   .blog {
+      scroll-margin-top: 20px;
+   }
+
+   .cardList {
+      display: grid;
+      grid-template-columns: 549px 1fr;
+      grid-auto-rows: 306px;
+      gap: 24px;
+   }
+
+   .cardList.showAll {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   .cardList:not(.showAll) .infoBlog {
+      grid-row: span 2;
+   }
+
+   .cardList.showAll .infoBlog {
+      grid-row: auto;
+   }
+
+   .infoBlog {
+      background-color: var(--grey);
+      border-radius: 8px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   .title {
+      font-size: 40px;
+      text-align: left;
+      margin-bottom: 16px;
+   }
+
+   .details {
+      font-size: 24px;
+      text-align: left;
+   }
+
+   .buttonDesktop {
+      display: block;
+      background: transparent;
+      border: none;
+      color: var(--black);
+      text-decoration: underline;
+      font-family: var(--second-family);
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: auto;
+   }
+
+   .buttonDesktop:hover {
+      font-weight: 600;
+   }
+
+   .buttonDesktop:active {
+      color: var(--gold);
+      border-color: var(--gold);
+   }
+
+   .buttonMobile {
+      display: none;
+   }
+
+   .cardList.showAll .buttonDesktop {
+      display: none;
+   }
+
+   .cardList.showAll+.buttonMobile,
+   .cardList.showAll .buttonMobile {
+      display: block;
+      margin: 24px auto 0;
+   }
 }
