@@ -3,6 +3,25 @@
    display: inline-block;
 }
 
+.transparent .dropdownButton,
+.transparent .dropdownItem {
+   color: var(--white);
+   background: #000;
+}
+
+.transparent .dropdownButton::after,
+.transparent .dropdownItem::after {
+   background: var(--white);
+}
+
+.transparent .arrow {
+   filter: invert(0);
+}
+
+.transparent .dropdownItem.active {
+   color: var(--gold);
+}
+
 .light .dropdownButton,
 .light .dropdownItem {
    color: var(--white);

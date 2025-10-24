@@ -27,7 +27,9 @@ const Header = () => {
     document.documentElement.style.overflow = menuOpen ? "hidden" : "";
 
     const handleScroll = () => {
-      setScrolled(window.scrollY > 250 && window.innerWidth >= 768);
+      const scrollY = window.scrollY;
+
+      setScrolled(scrollY > 250);
 
       let current = "";
       menuItems.forEach(({ href }) => {
@@ -62,7 +64,7 @@ const Header = () => {
         <div className={styles.headerLeftDesktop}>
           <Link href="/">
             <Image
-              src={scrolled ? "/img/logo-black.svg" : "/img/logo.svg"}
+              src="/img/logo.svg"
               alt="logo"
               width={80}
               height={14}
@@ -101,7 +103,7 @@ const Header = () => {
       </div>
 
       <div className={styles.headerRightMobile}>
-        <LanguageSelector scrolled={scrolled} />
+        <LanguageSelector scrolled={scrolled} variant="transparent" />
         <button
           type="button"
           className={`${styles.burger} ${menuOpen ? styles.open : ""} ${
@@ -123,7 +125,7 @@ const Header = () => {
       >
         <Link href="/">
           <Image
-            src={scrolled ? "/img/logo-black.svg" : "/img/logo.svg"}
+            src="/img/logo.svg"
             alt="logo"
             width={131}
             height={22}

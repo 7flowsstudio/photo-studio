@@ -14,31 +14,6 @@
    transition: padding 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-.header.scrolled a,
-.header.scrolled .btnDesktop {
-   color: var(--black);
-}
-
-.header.scrolled a:hover {
-   border-color: var(--black);
-}
-
-.header.scrolled .btnDesktop:hover {
-   border: 1px solid var(--gold);
-}
-
-.activeLink {
-   color: var(--gold) !important;
-   border-bottom: 1px solid var(--gold) !important;
-}
-
-.desktop {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   flex-wrap: nowrap;
-}
-
 .logoMobileVersion {
    display: block;
 }
@@ -94,6 +69,7 @@
    padding: 0;
    position: relative;
    z-index: 110;
+   background: var(--black);
 }
 
 .burger span {
@@ -107,7 +83,7 @@
 }
 
 .scrolledBurger span {
-   background: var(--black);
+   background: var(--white);
 }
 
 .burger.open span:nth-child(1) {
@@ -153,7 +129,7 @@
 }
 
 .scrolledMenu {
-   background: var(--background);
+   background: var(--black);
 }
 
 .menuList {
@@ -193,6 +169,32 @@
 }
 
 @media (min-width: 768px) {
+
+   .header.scrolled a,
+   .header.scrolled .btnDesktop {
+      color: var(--black);
+   }
+
+   .header.scrolled a:hover {
+      border-color: var(--black);
+   }
+
+   .header.scrolled .btnDesktop:hover {
+      border: 1px solid var(--gold);
+   }
+
+   .activeLink {
+      color: var(--gold) !important;
+      border-bottom: 1px solid var(--gold) !important;
+   }
+
+   .desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+   }
+
    .logoMobileVersion {
       display: none;
    }

@@ -7,7 +7,7 @@ import styles from "./LanguageSelector.module.css";
 
 interface LanguageSelectorProps {
   scrolled?: boolean;
-  variant?: "light" | "dark";
+  variant?: "light" | "dark" | "transparent";
 }
 
 const LanguageSelector: React.FC<LanguageSelectorProps> = ({
