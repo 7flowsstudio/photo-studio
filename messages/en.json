@@ -230,9 +230,10 @@
   },
 
   "Contacts": {
-     "title": "Leave a request to discuss the details of the photoshoot",
-  "text_1": "Write to me if you have a photoshoot idea or a question",
-  "text_2": "I'm always in touch and reply quickly",
+    "title": "Leave a request to discuss the details of the photoshoot",
+    "text_1": "Write to me if you have a photoshoot idea or a question",
+    "text_2": "I'm always in touch and reply quickly",
+    "text_3": "Or write to me on Messenger",
     "form": {
       "nameLabel": "Full name",
       "namePlaceholder": "Your name",
@@ -256,7 +257,7 @@
     "viewAll": "View all",
     "showLess": "Show less"
   },
- 
+
   "LocaleLayout": {
     "title": "kobryn-photo.website",
     "description": "Photography that works for you"

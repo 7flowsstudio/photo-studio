@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import s from "./Contacts.module.css";
+import Image from "next/image";
 
 const Contacts = () => {
   const t = useTranslations("Contacts");
@@ -68,13 +69,34 @@ const Contacts = () => {
           />
         </label>
 
-        <button type="submit" disabled={isSubmitting}>
+        <button className={s.btnCont} type="submit" disabled={isSubmitting}>
           {isSubmitting ? t("form.sending") : t("form.submit")}
         </button>
 
         {status === "success" && <p>{t("form.success")}</p>}
         {status === "error" && <p>{t("form.error")}</p>}
       </form>
+      <p className={s.textMess}>{t("text_3")}</p>
+      <div className={s.btnsCont}>
+        <button className={s.btnInst}>
+          Instagram
+          <Image
+            src="/img/icons/arrow-right.svg"
+            alt="arrow"
+            width={24}
+            height={24}
+          />
+        </button>
+        <button className={s.btnFaceb}>
+          Facebook
+          <Image
+            src="/img/icons/arrow-right.svg"
+            alt="arrow"
+            width={24}
+            height={24}
+          />
+        </button>
+      </div>
     </div>
   );
 };
