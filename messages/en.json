@@ -33,7 +33,7 @@
       { "type": "catalogs", "name": "Предметна зйомка для каталогів" },
       { "type": "events", "name": "Репортажі з подій" }
     ],
-    
+
     "photos": {
       "portrait-01": {
         "alt": "Портрет жінки з хвилястим волоссям у чорній напівпрозорій блузі, студійне тло."
@@ -134,10 +134,16 @@
         "description": "A lightning-fast consult — and you’re already in frame",
         "list": [
           { "text": "30 minutes of shooting", "icon": "/img/icons/camera.svg" },
-          { "text": "10 photos with signature editing", "icon": "/img/icons/photos.svg" },
+          {
+            "text": "10 photos with signature editing",
+            "icon": "/img/icons/photos.svg"
+          },
           { "text": "Online gallery", "icon": "/img/icons/images.svg" },
           { "text": "Editing within 3 days", "icon": "/img/icons/additor.svg" },
-          { "text": "Perfect for profiles and memorable family moments.", "icon": "/img/icons/check.svg" }
+          {
+            "text": "Perfect for profiles and memorable family moments.",
+            "icon": "/img/icons/check.svg"
+          }
         ],
         "price": "1200 ₴"
       },
@@ -146,9 +152,18 @@
         "name": "Standard",
         "description": "Your idea + my style = a spot-on result without a long wait",
         "list": [
-          { "text": "One hour of cozy atmosphere", "icon": "/img/icons/camera.svg" },
-          { "text": "30+ artistic shots, +15 photos the next day", "icon": "/img/icons/photos.svg" },
-          { "text": "Help with posing and location", "icon": "/img/icons/location.svg" }
+          {
+            "text": "One hour of cozy atmosphere",
+            "icon": "/img/icons/camera.svg"
+          },
+          {
+            "text": "30+ artistic shots, +15 photos the next day",
+            "icon": "/img/icons/photos.svg"
+          },
+          {
+            "text": "Help with posing and location",
+            "icon": "/img/icons/location.svg"
+          }
         ],
         "price": "3500 ₴"
       },
@@ -157,11 +172,20 @@
         "name": "Premium",
         "description": "Maximum comfort and a result \n“like in the movies”",
         "list": [
-          { "text": "Up to 2 hours of shooting", "icon": "/img/icons/camera.svg" },
+          {
+            "text": "Up to 2 hours of shooting",
+            "icon": "/img/icons/camera.svg"
+          },
           { "text": "60+ retouched photos", "icon": "/img/icons/photos.svg" },
-          { "text": "Look consultation, stylist or studio", "icon": "/img/icons/consultation.svg" },
+          {
+            "text": "Look consultation, stylist or studio",
+            "icon": "/img/icons/consultation.svg"
+          },
           { "text": "Editing within 5 days", "icon": "/img/icons/additor.svg" },
-          { "text": "Perfect if you want \n“everything at once”", "icon": "/img/icons/check.svg" }
+          {
+            "text": "Perfect if you want \n“everything at once”",
+            "icon": "/img/icons/check.svg"
+          }
         ],
         "price": "1200 ₴"
       },
@@ -170,8 +194,14 @@
         "name": "Reportage / Events",
         "description": "Celebration vibe, movement, emotions — included",
         "list": [
-          { "text": "Each additional hour +2500 ₴", "icon": "/img/icons/money.svg" },
-          { "text": "Whatever the format — I capture the moment.", "icon": "/img/icons/smile.svg" }
+          {
+            "text": "Each additional hour +2500 ₴",
+            "icon": "/img/icons/money.svg"
+          },
+          {
+            "text": "Whatever the format — I capture the moment.",
+            "icon": "/img/icons/smile.svg"
+          }
         ],
         "price": "3500 ₴"
       }
@@ -180,10 +210,19 @@
       "name": "Additionally",
       "list": [
         { "text": "individual portraits", "icon": "/img/icons/check.svg" },
-        { "text": "shoots for businesses and startups", "icon": "/img/icons/check.svg" },
-        { "text": "product photos for a catalog or website", "icon": "/img/icons/check.svg" },
+        {
+          "text": "shoots for businesses and startups",
+          "icon": "/img/icons/check.svg"
+        },
+        {
+          "text": "product photos for a catalog or website",
+          "icon": "/img/icons/check.svg"
+        },
         { "text": "event reportage", "icon": "/img/icons/check.svg" },
-        { "text": "special packages for corporate clients", "icon": "/img/icons/check.svg" }
+        {
+          "text": "special packages for corporate clients",
+          "icon": "/img/icons/check.svg"
+        }
       ],
       "image": "/img/price/photo.jpg"
     },
@@ -191,6 +230,9 @@
   },
 
   "Contacts": {
+     "title": "Leave a request to discuss the details of the photoshoot",
+  "text_1": "Write to me if you have a photoshoot idea or a question",
+  "text_2": "I'm always in touch and reply quickly",
     "form": {
       "nameLabel": "Full name",
       "namePlaceholder": "Your name",
@@ -214,23 +256,7 @@
     "viewAll": "View all",
     "showLess": "Show less"
   },
-  "Contacts": {
-    "form": {
-      "nameLabel": "Full name",
-      "namePlaceholder": "Your name",
-      "numberLabel": "Phone",
-      "numberPlaceholder": "+48",
-      "messageLabel": "Comment",
-      "messagePlaceholder": "You can leave your wishes or details here",
-      "submit": "SEND REQUEST",
-      "sending": "Sending...",
-      "success": "✅ Request has been sent!",
-      "error": "❌ Error while sending.",
-      "requiredName": "Please enter your name",
-      "requiredNumber": "Please enter your phone number",
-      "invalidNumber": "Invalid phone number"
-    }
-  },
+ 
   "LocaleLayout": {
     "title": "kobryn-photo.website",
     "description": "Photography that works for you"

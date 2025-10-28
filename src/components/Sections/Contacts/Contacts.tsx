@@ -6,7 +6,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import s from "./Contacts.module.css";
 
 const Contacts = () => {
-  const t = useTranslations("Contacts.form");
+  const t = useTranslations("Contacts");
   const {
     register,
     handleSubmit,
@@ -29,45 +29,51 @@ const Contacts = () => {
 
   return (
     <div id="contacts" className={s.container}>
+      <h2 className={s.title}>{t("title")}</h2>
+      <p className={s.text}>{t("text_1")}</p>
+      <p className={s.text}>{t("text_2")}</p>
       <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
         <label className={s.contInput}>
-          {t("nameLabel")}
+          {t("form.nameLabel")}
           <input
             className={s.inputCont}
-            {...register("name", { required: t("requiredName") })}
-            placeholder={t("namePlaceholder")}
+            {...register("name", { required: t("form.requiredName") })}
+            placeholder={t("form.namePlaceholder")}
           />
           {errors.name && <p>{errors.name.message}</p>}
         </label>
 
         <label className={s.contInput}>
-          {t("numberLabel")}
+          {t("form.numberLabel")}
           <input
             className={s.inputCont}
             {...register("number", {
-              required: t("requiredNumber"),
-              pattern: { value: /^[0-9+\s-]+$/, message: t("invalidNumber") },
+              required: t("form.requiredNumber"),
+              pattern: {
+                value: /^[0-9+\s-]+$/,
+                message: t("form.invalidNumber"),
+              },
             })}
-            placeholder={t("numberPlaceholder")}
+            placeholder={t("form.numberPlaceholder")}
           />
           {errors.number && <p>{errors.number.message}</p>}
         </label>
 
         <label className={s.contInput}>
-          {t("messageLabel")}
+          {t("form.messageLabel")}
           <textarea
             className={s.textareaCont}
             {...register("message")}
-            placeholder={t("messagePlaceholder")}
+            placeholder={t("form.messagePlaceholder")}
           />
         </label>
 
         <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? t("sending") : t("submit")}
+          {isSubmitting ? t("form.sending") : t("form.submit")}
         </button>
 
-        {status === "success" && <p>{t("success")}</p>}
-        {status === "error" && <p>{t("error")}</p>}
+        {status === "success" && <p>{t("form.success")}</p>}
+        {status === "error" && <p>{t("form.error")}</p>}
       </form>
     </div>
   );
