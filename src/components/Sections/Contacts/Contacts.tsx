@@ -98,6 +98,16 @@ const Contacts = () => {
             />
           </button>
         </div>
+        <iframe
+          className={s.map}
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18803.637314330583!2d14.237882697127942!3d53.90589612672929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa58cdcdae3301%3A0x1fe03a970a6e4dc8!2z0KHQstGW0L3QvtGD0LnRgdGM0YbQtSwg0J_QvtC70YzRidCw!5e0!3m2!1suk!2sua!4v1761681177091!5m2!1suk!2sua"
+          width="600"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
   );

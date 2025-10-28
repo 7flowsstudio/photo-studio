@@ -85,3 +85,13 @@
   font-size: 18px;
   font-family: var(--second-family);
 }
+.map {
+  width: 311px;
+  height: 391px;
+  border-radius: 8px;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 16px;
+  /* justify-content: center; */
+}
