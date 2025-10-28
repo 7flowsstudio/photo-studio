@@ -100,9 +100,9 @@ button {
   cursor: pointer;
   background: none;
 }
-button:hover {
-  background: var(--Stroke-light);
-}
+/* button:hover {
+  background: var(--gold);
+} */
 
 input {
   outline: transparent;
