@@ -4,13 +4,23 @@
   background: rgba(255, 253, 248, 1);
 }
 .title,
-.text,
+.textFirst,
+.textSec,
 .textMess {
   text-align: center;
 }
-
-.form {
+.textFirst {
+  line-height: 1.5;
+  padding-top: 16px;
+}
+.textSec {
+  padding-bottom: 24px;
+  line-height: 1.5;
+}
+.formWrapp {
   background-color: rgba(251, 244, 230, 1);
+}
+.form {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -24,22 +34,31 @@
   border-radius: 8px;
   padding: 8px;
   height: 60px;
+  font-size: 12px;
   /* min-width: 311px; */
 }
 .contInput {
   display: flex;
   flex-direction: column;
+  font-size: 14px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  gap: 8px;
 }
 .btnCont {
   background: var(--gold);
   border-radius: 8px;
   border: none;
   height: 60px;
+  margin-top: 8px;
 }
 
 .textMess {
   display: flex;
   align-items: center;
+  font-weight: 500;
+  line-height: 1.5;
+  padding-bottom: 16px;
 }
 .textMess::before,
 .textMess::after {
@@ -52,6 +71,7 @@
 .btnsCont {
   display: flex;
   justify-content: center;
+  gap: 16px;
 }
 .btnInst,
 .btnFaceb {
@@ -60,4 +80,8 @@
   min-width: 120px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 51px;
+  font-size: 18px;
+  font-family: var(--second-family);
 }
