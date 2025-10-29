@@ -68,6 +68,7 @@ const Header = () => {
               alt="logo"
               width={80}
               height={14}
+              priority
               className={styles.logoMobileVersion}
             />
             <Image
@@ -75,6 +76,7 @@ const Header = () => {
               alt="logo"
               width={106}
               height={18}
+              priority
               className={styles.logoDesktopVersion}
             />
           </Link>
