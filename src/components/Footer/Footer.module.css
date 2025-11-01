@@ -1,6 +1,23 @@
+.containerFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .wrappImg {
   width: 160px;
   height: 160px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.element {
+  display: flex;
+  align-items: center;
+}
+.wrappSocMedia {
+  display: flex;
 }
 @media screen and (min-width: 768px) {
   .wrappImg {
