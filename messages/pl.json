@@ -207,7 +207,10 @@
     "viewAll": "Zobacz wszystkie",
     "showLess": "Pokaż mniej"
   },
-
+  "Footer": {
+    "title": "KONTAKT",
+    "map": "Świnoujście, Polska"
+  },
   "Portfolio": {
     "title": "ДЕКІЛЬКА ІСТОРІЙ У КАДРІ",
     "categories": [

@@ -231,7 +231,10 @@
     "viewAll": "Переглянути всі",
     "showLess": "Показати менше"
   },
-
+  "Footer": {
+    "title": "КОНТАКТИ",
+    "map": "Свиноуйсьце, Польща"
+  },
   "LocaleLayout": {
     "title": "kobryn-photo.website",
     "description": "Фотографія, яка працює на вас"
