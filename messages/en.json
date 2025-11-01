@@ -259,7 +259,8 @@
   },
   "Footer": {
     "title": "CONTACTS",
-    "map": "Swinoujscie, Poland"
+    "map": "Swinoujscie, Poland",
+    "rights": "All rights reserved."
   },
   "LocaleLayout": {
     "title": "kobryn-photo.website",

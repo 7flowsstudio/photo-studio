@@ -76,6 +76,7 @@ const Footer = () => {
         style={{ width: "100%", height: "100%" }}
         priority
       />
+      <p className={s.rights}>© 2025 kobryn-photo.website. {t("rights")}</p>
     </div>
   );
 };
