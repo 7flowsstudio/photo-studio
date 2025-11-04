@@ -7,10 +7,10 @@ const About = () => {
   const t = useTranslations("About");
   return (
     <section className={s.about}>
-      <div className={`${s.containerAbout} container`}>
+      <div className={s.containerAbout}>
         <div className={s.imgAbout}>
           <Image
-            src="/img/about/aboutme-desk-first.jpg"
+            src="/img/about/aboutme.jpg"
             alt="Image 1"
             width={432}
             height={502}
@@ -26,7 +26,7 @@ const About = () => {
         </div>
         <div className={s.imgAbout}>
           <Image
-            src="/img/about/aboutme-desk-sec.jpg"
+            src="/img/about/aboutme2.jpg"
             alt="Image 2"
             width={546}
             height={502}

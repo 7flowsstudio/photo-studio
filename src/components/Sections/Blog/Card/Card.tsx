@@ -14,16 +14,20 @@ const Card = ({ post, locale }: Props) => {
   const t = useTranslations("Blog");
   return (
     <div className={styles.card}>
-      <Image
-        src={post.image}
-        alt={post.title}
-        width={342}
-        height={280}
-        className={styles.image}
-      />
+      <div className={styles.imageWrapper}>
+        <Image
+          src={post.image}
+          alt={post.title}
+          width={342}
+          height={280}
+          className={styles.image}
+        />
+      </div>
       <div className={styles.postContainer}>
+        <div>
         <h3 className={styles.title}>{post.title}</h3>
         <p className={styles.text}>{post.text}</p>
+        </div>
         <Link href={`/${locale}/blog/${post.slug}`} className={styles.readMore}>
           {t("readMore")}
         </Link>

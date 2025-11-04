@@ -1,13 +1,30 @@
 .hero {
    position: relative;
-   background-image:
-      linear-gradient(0deg, rgba(0, 0, 0, 0) 61.72%, #000000 80.51%),
-      linear-gradient(180deg, rgba(0, 0, 0, 0) 74.02%, #000000 90.63%),
-      url("/img/hero/background-mobile.png");
+   overflow: hidden;
    height: 866px;
-   background-size: 120%;
-   background-position: 75% 105%;
-   background-repeat: no-repeat;
+}
+
+.bgMobile {
+   object-fit: cover;
+   transform: scale(1.3) translate(-3dvw, -6dvh);
+   transform-origin: center bottom;
+   z-index: -3;
+}
+
+.bgDesktop {
+   display: none;
+   object-fit: cover;
+   z-index: -3;
+}
+
+
+.overlay {
+   position: absolute;
+   inset: 0;
+   z-index: -2;
+   background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0) 61.72%, #000000 80.51%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 74.02%, #000000 90.63%);
 }
 
 .desktop {
@@ -24,10 +41,8 @@
 }
 
 .content {
-
    color: var(--white);
-   min-width: 342px;
-   width: 100%;
+   width: 342px;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
@@ -80,28 +95,25 @@
    text-align: center;
 }
 
-@media screen and (min-width: 412px) {
-   .hero {
-      background-position: 20% 98%;
-      background-size: 117%;
-   }
-}
-
-@media screen and (min-width: 578px) {
-   .hero {
-      background-position: 20% 78%;
-   }
-}
-
 @media screen and (min-width: 768px) {
-   .hero {
-      height: 100vh;
-      background-size: cover;
-      background-image:
-         linear-gradient(270deg, rgba(0, 0, 0, 0) 39.24%, rgba(0, 0, 0, 0.8) 100%),
-         url("/img/hero/background.png");
-      background-position: 60% 130%;
 
+   .bgMobile {
+      display: none;
+   }
+
+   .bgDesktop {
+      display: inline-block;
+      object-position: 75% 130%;
+   }
+
+   .overlayMobile {
+      display: none;
+   }
+
+   .overlay {
+      background: linear-gradient(270deg,
+            rgba(0, 0, 0, 0) 39.24%,
+            rgba(0, 0, 0, 0.8) 100%);
    }
 
    .desktop {
@@ -121,7 +133,7 @@
    }
 
    .content {
-      max-width: 670px;
+      max-width: 424px;
       width: 100%;
       gap: 32px;
       justify-content: center;
@@ -135,7 +147,7 @@
    .btn.desktop {
       align-self: flex-start;
       margin-top: 32px;
-      padding: 16.5px 124.5px;
+      padding: 16.5px 100px;
    }
 
    .title {
@@ -150,12 +162,19 @@
 }
 
 @media screen and (min-width: 1280px) {
+   .hero {
+      height: 100dvh;
+   }
+
+   .bgDesktop {
+      object-position: right top;
+   }
+
    .wrapperInfo {
       padding-top: 140px;
    }
 
-   .hero {
-      background-position-x: right;
-      background-position-y: top;
+   .content {
+      max-width: 670px;
    }
 }

@@ -1,0 +1,32 @@
+.containerFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrappImg {
+  width: 160px;
+  height: 160px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.element {
+  display: flex;
+  align-items: center;
+}
+.wrappSocMedia {
+  display: flex;
+}
+.rights {
+  text-align: center;
+  width: 100%;
+  border-top: 2px solid #17120a;
+}
+@media screen and (min-width: 768px) {
+  .wrappImg {
+    width: 200px;
+    height: 200px;
+  }
+}

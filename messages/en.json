@@ -25,7 +25,6 @@
   "Reviews": {
     "title": "What my clients say"
   },
-
   "Portfolio": {
     "title": "A FEW STORIES IN FRAME",
     "categories": [
@@ -34,6 +33,7 @@
       { "type": "catalogs", "name": "Product photography for catalogs" },
       { "type": "events", "name": "Event reportage" }
     ],
+
     "photos": {
       "portrait-01": {
         "alt": "Woman with wavy hair in a sheer black blouse, studio backdrop."
@@ -140,7 +140,165 @@
     },
     "orderBtn": "Book a shoot"
   },
+
+  "Portfolio": {
+    "title": "A FEW STORIES IN FRAME",
+    "categories": [
+      { "type": "comercial", "name": "Commercial shoots for brands" },
+      { "type": "portraits", "name": "Portraits for CVs and social media" },
+      { "type": "catalogs", "name": "Product photography for catalogs" },
+      { "type": "events", "name": "Event reportage" }
+    ],
+    "photos": {
+      "portrait-01": {
+        "alt": "Woman with wavy hair in a sheer black blouse, studio backdrop."
+      },
+      "portrait-02": {
+        "alt": "Young man with messy dark hair and bright blue eyes, close-up."
+      },
+      "portrait-03": {
+        "alt": "Smiling man in a patterned blue shirt and backward cap, outdoors."
+      },
+      "portrait-04": {
+        "alt": "Woman in a floral blouse sitting on stairs, smiling."
+      },
+      "portrait-05": {
+        "alt": "Woman in a red turtleneck laughing, blurred city background."
+      },
+      "portrait-06": {
+        "alt": "Person in cool blue-purple lighting with a neutral expression."
+      },
+      "portrait-07": {
+        "alt": "Young man with curly blond hair wearing a black hat and T-shirt, soft daylight."
+      },
+      "portrait-08": {
+        "alt": "Smiling bald man in a colorful shirt, white wall behind."
+      },
+      "portrait-09": {
+        "alt": "Man with medium-length hair, a chain necklace and light background, slight smile."
+      },
+      "portrait-10": {
+        "alt": "Portrait of a young man with dark curly hair and a thin necklace, warm backdrop."
+      },
+      "portrait-11": {
+        "alt": "Moody portrait of a woman with dark updo and statement necklace, dark background."
+      },
+      "portrait-12": {
+        "alt": "Woman with a high bun in a white top, beaming smile, bright background."
+      }
+    },
+    "noPhotos": "No photos in this category yet.",
+    "loadMoreBtn": "View all"
+  },
+  "Prices": {
+    "title": "Service Packages",
+    "packages": [
+      {
+        "id": "mini",
+        "name": "Mini",
+        "description": "A lightning-fast consult — and you’re already in frame",
+        "list": [
+          { "text": "30 minutes of shooting", "icon": "/img/icons/camera.svg" },
+          {
+            "text": "10 photos with signature editing",
+            "icon": "/img/icons/photos.svg"
+          },
+          { "text": "Online gallery", "icon": "/img/icons/images.svg" },
+          { "text": "Editing within 3 days", "icon": "/img/icons/additor.svg" },
+          {
+            "text": "Perfect for profiles and memorable family moments.",
+            "icon": "/img/icons/check.svg"
+          }
+        ],
+        "price": "1200 ₴"
+      },
+      {
+        "id": "standard",
+        "name": "Standard",
+        "description": "Your idea + my style = a spot-on result without a long wait",
+        "list": [
+          {
+            "text": "One hour of cozy atmosphere",
+            "icon": "/img/icons/camera.svg"
+          },
+          {
+            "text": "30+ artistic shots, +15 photos the next day",
+            "icon": "/img/icons/photos.svg"
+          },
+          {
+            "text": "Help with posing and location",
+            "icon": "/img/icons/location.svg"
+          }
+        ],
+        "price": "3500 ₴"
+      },
+      {
+        "id": "premium",
+        "name": "Premium",
+        "description": "Maximum comfort and a result \n“like in the movies”",
+        "list": [
+          {
+            "text": "Up to 2 hours of shooting",
+            "icon": "/img/icons/camera.svg"
+          },
+          { "text": "60+ retouched photos", "icon": "/img/icons/photos.svg" },
+          {
+            "text": "Look consultation, stylist or studio",
+            "icon": "/img/icons/consultation.svg"
+          },
+          { "text": "Editing within 5 days", "icon": "/img/icons/additor.svg" },
+          {
+            "text": "Perfect if you want \n“everything at once”",
+            "icon": "/img/icons/check.svg"
+          }
+        ],
+        "price": "1200 ₴"
+      },
+      {
+        "id": "events",
+        "name": "Reportage / Events",
+        "description": "Celebration vibe, movement, emotions — included",
+        "list": [
+          {
+            "text": "Each additional hour +2500 ₴",
+            "icon": "/img/icons/money.svg"
+          },
+          {
+            "text": "Whatever the format — I capture the moment.",
+            "icon": "/img/icons/smile.svg"
+          }
+        ],
+        "price": "3500 ₴"
+      }
+    ],
+    "additional": {
+      "name": "Additionally",
+      "list": [
+        { "text": "individual portraits", "icon": "/img/icons/check.svg" },
+        {
+          "text": "shoots for businesses and startups",
+          "icon": "/img/icons/check.svg"
+        },
+        {
+          "text": "product photos for a catalog or website",
+          "icon": "/img/icons/check.svg"
+        },
+        { "text": "event reportage", "icon": "/img/icons/check.svg" },
+        {
+          "text": "special packages for corporate clients",
+          "icon": "/img/icons/check.svg"
+        }
+      ],
+      "image": "/img/price/photo.jpg"
+    },
+    "orderBtn": "Book a shoot"
+  },
+
   "Contacts": {
+    "title": "Leave a request to discuss the details of the photoshoot",
+    "text_1": "Write to me if you have a photoshoot idea or a question",
+    "text_2": "I'm always in touch and reply quickly",
+    "text_3": "Or write to me on Messenger",
     "form": {
       "nameLabel": "Full name",
       "namePlaceholder": "Your name",
@@ -164,7 +322,11 @@
     "viewAll": "View all",
     "showLess": "Show less"
   },
-
+  "Footer": {
+    "title": "CONTACTS",
+    "map": "Swinoujscie, Poland",
+    "rights": "All rights reserved."
+  },
   "LocaleLayout": {
     "title": "kobryn-photo.website",
     "description": "Photography that works for you"

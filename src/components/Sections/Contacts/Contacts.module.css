@@ -1,20 +1,140 @@
-.container {
-  padding: 16px;
-  background-color: rgba(251, 244, 230, 1);
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 16px;
+  justify-content: center;
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: 60px;
+  padding: 16px;
+  background: rgba(251, 244, 230, 1);
+  border-radius: 8px;
+}
+.title,
+.textFirst,
+.textSec,
+.textMess {
+  text-align: center;
+}
+.textFirst {
+  line-height: 1.5;
+  padding-top: 16px;
+}
+.textSec {
+  padding-bottom: 24px;
+  line-height: 1.5;
+}
+.formWrapp {
+  max-width: 600px;
+  margin: 0 auto;
+}
 .form {
   display: flex;
   flex-direction: column;
-  max-width: 311px;
+  gap: 8px;
+  /* max-width: 311px; */
+  /* padding: 16px; */
+  margin: 0 auto;
 }
 .inputCont,
 .textareaCont {
   border: 1px solid rgba(184, 184, 184, 1);
   border-radius: 8px;
   padding: 8px;
+  height: 60px;
+  font-size: 12px;
+  /* min-width: 311px; */
 }
 .contInput {
   display: flex;
   flex-direction: column;
+  font-size: 14px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  gap: 8px;
+}
+.btnCont {
+  background: var(--gold);
+  border-radius: 8px;
+  border: none;
+  height: 60px;
+  margin-top: 8px;
+}
+
+.textMess {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: 1.5;
+  padding-bottom: 16px;
+}
+.textMess::before,
+.textMess::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--black);
+  margin: 0 4px;
+}
+.btnsCont {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.btnInst,
+.btnFaceb {
+  border-radius: 8px;
+  border: 1px solid #f3c361;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 51px;
+  font-size: 18px;
+  font-family: var(--second-family);
+}
+.mapWrapp {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.map {
+  /* min-width: 100; */
+  height: 391px;
+  border-radius: 8px;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 16px;
+  /* justify-content: center; */
+}
+@media screen and (min-width: 960px) {
+  .container {
+    padding: 32px;
+    gap: 24px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 888px;
+    margin: 0 auto;
+  }
+  .form {
+    width: 400px;
+  }
+  .wrappFirstCont {
+    max-width: 400px;
+    /* margin: 0 auto; */
+  }
+  .map {
+    width: 400px;
+    height: 503px;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .textFirst,
+  .textSec {
+    font-size: 24px;
+  }
 }
