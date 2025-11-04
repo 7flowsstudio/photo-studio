@@ -36,7 +36,7 @@
 }
 
 .categories_item:hover {
-    border-bottom: 2px solid var(--white);
+    color: var(--gold);
 }
 
 .active {

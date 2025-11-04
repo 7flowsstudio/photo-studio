@@ -1,5 +1,23 @@
-.photo {
+.card {
+    position: relative;
+    display: block;
+
     border-radius: 10px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.photo {
+    display: block;
     width: 100%;
     height: auto;
+
+    transition: transform 220ms ease, filter 220ms ease;
+    will-change: transform;
+}
+
+@media screen and (min-width: 768px) {
+    .card:hover .photo{
+        transform: scale(1.05);
+    }
 }

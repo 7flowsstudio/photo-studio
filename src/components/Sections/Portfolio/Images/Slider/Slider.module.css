@@ -1,3 +1,7 @@
+.embla__viewport { overflow: visible; }
+.embla__container { overflow: visible; }
+.embla__slide { overflow: visible; }
+
 .slider {
     position: relative;
     width: 100%;
@@ -43,10 +47,17 @@
 }
 
 .slider_item {
+    position: relative;
     flex: 0 0 100%;
     min-width: 0;
+
+    cursor: pointer;
 
     @media screen and (min-width: 768px) {
         flex: 0 0 calc((100% - 3 * 24px) / 4);
     }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .slider_item:hover { z-index: 3; }
 }
