@@ -250,6 +250,11 @@
       "invalidNumber": "Invalid phone number"
     }
   },
+  "Modal": {
+    "title": "THANK YOU FOR YOUR REQUEST!",
+    "text": "I have received your message and will contact you soon to discuss the details of the photoshoot.",
+    "button": "TO HOME PAGE"
+  },
   "Blog": {
     "title": "Some useful insight",
     "details": "On my blog I share tips, behind-the-scenes stories, and inspiration to help you feel more confident in front of the camera and understand my approach to photography.",
