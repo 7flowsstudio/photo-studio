@@ -39,3 +39,9 @@
     line-height: 1.5;
     text-align: center;
 }
+
+.toggle_btn:hover,
+.toggle_btn:focus {
+    color: var(--gold);
+    border-bottom-color:  var(--gold);
+}

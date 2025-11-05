@@ -73,7 +73,72 @@
       }
     },
     "noPhotos": "W tej kategorii nie ma jeszcze zdjęć.",
-    "loadMoreBtn": "Zobacz wszystkie"
+    "loadMoreBtn": "Zobacz wszystkie",
+    "showLessBtn": "Pokaż mniej"
+  },
+  "Prices": {
+    "title": "Pakiety usług",
+    "packages": [
+      {
+        "id": "mini",
+        "name": "Mini",
+        "description": "Błyskawiczna konsultacja — i już jesteś w kadrze",
+        "list": [
+          { "text": "30 minut zdjęć", "icon": "/img/icons/camera.svg" },
+          { "text": "10 zdjęć w autorskiej obróbce", "icon": "/img/icons/photos.svg" },
+          { "text": "Galeria online", "icon": "/img/icons/images.svg" },
+          { "text": "Obróbka w 3 dni", "icon": "/img/icons/additor.svg" },
+          { "text": "Idealne do profilu i rodzinnych wspomnień.", "icon": "/img/icons/check.svg" }
+        ],
+        "price": "1200 ₴"
+      },
+      {
+        "id": "standard",
+        "name": "Standard",
+        "description": "Twój pomysł + mój styl = celny efekt bez długiego czekania",
+        "list": [
+          { "text": "Godzina przyjemnej atmosfery", "icon": "/img/icons/camera.svg" },
+          { "text": "30+ artystycznych kadrów, +15 zdjęć następnego dnia", "icon": "/img/icons/photos.svg" },
+          { "text": "Pomoc z pozowaniem i lokalizacją", "icon": "/img/icons/location.svg" }
+        ],
+        "price": "3500 ₴"
+      },
+      {
+        "id": "premium",
+        "name": "Premium",
+        "description": "Maksymalny komfort i efekt \n„jak w filmie”",
+        "list": [
+          { "text": "Do 2 godzin zdjęć", "icon": "/img/icons/camera.svg" },
+          { "text": "60+ retuszowanych zdjęć", "icon": "/img/icons/photos.svg" },
+          { "text": "Konsultacja stylizacji, stylista lub studio", "icon": "/img/icons/consultation.svg" },
+          { "text": "Obróbka w 5 dni", "icon": "/img/icons/additor.svg" },
+          { "text": "W sam raz, gdy chcesz \n„wszystko naraz”", "icon": "/img/icons/check.svg" }
+        ],
+        "price": "1200 ₴"
+      },
+      {
+        "id": "events",
+        "name": "Reportaż / Wydarzenia",
+        "description": "Oprawa świąt, ruch, emocje — w pakiecie",
+        "list": [
+          { "text": "Każda kolejna godzina +2500 ₴", "icon": "/img/icons/money.svg" },
+          { "text": "Niezależnie od formatu — łapię moment.", "icon": "/img/icons/smile.svg" }
+        ],
+        "price": "3500 ₴"
+      }
+    ],
+    "additional": {
+      "name": "Dodatkowo",
+      "list": [
+        { "text": "portrety indywidualne", "icon": "/img/icons/check.svg" },
+        { "text": "sesje dla firm i startupów", "icon": "/img/icons/check.svg" },
+        { "text": "zdjęcia produktowe do katalogu lub na stronę", "icon": "/img/icons/check.svg" },
+        { "text": "reportaże z wydarzeń", "icon": "/img/icons/check.svg" },
+        { "text": "specjalne pakiety dla klientów korporacyjnych", "icon": "/img/icons/check.svg" }
+      ],
+      "image": "/img/price/photo.jpg"
+    },
+    "orderBtn": "Zamów sesję"
   },
   "Prices": {
     "title": "Pakiety usług",

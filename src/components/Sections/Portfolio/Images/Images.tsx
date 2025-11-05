@@ -13,12 +13,13 @@ type PhotoProps = {
     onOpenModal?: (item: Item) => void;
     expanded: boolean;
     className?: string;
+    onImageClick: (image: Item) => void;
 }
 
-export const Images = ({items, category, expanded}: PhotoProps) => {
+export const Images = ({items, category, expanded, onImageClick}: PhotoProps) => {
     const t = useTranslations("Portfolio");
     const filtered = useMemo(() => items.filter(item => item.category === category), [items, category]);
-    const visible = expanded ? filtered : filtered.slice(0, 4);
+
 
     if (filtered.length === 0) {
         return <p className={s.placeholder}>{t("noPhotos")}</p>
@@ -28,18 +29,18 @@ export const Images = ({items, category, expanded}: PhotoProps) => {
         <div className={expanded ? s.gridWrapper : s.sliderWrapper}>
             {expanded ? (
                 <ul className={s.image_list}>
-                    {visible.map(item => (
-                        <li key={item.id} className={s.image_item}>
+                    {filtered.map(item => (
+                        <li key={item.id} className={s.image_item} onClick={() => onImageClick(item)}>
                             <ImageCard
                                 url={item.url}
                                 alt={t(item.alt)}
-                                onClick={() => {}}
+                                onClick={() => onImageClick(item)}
                             />
                         </li>
                     ))}
 
                 </ul>) : (
-                    <Slider images={visible} />
+                    <Slider images={filtered} onImageClick={onImageClick} />
             )
             }
         </div>
