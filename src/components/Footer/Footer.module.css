@@ -3,21 +3,34 @@
   flex-direction: column;
   align-items: center;
 }
+.title {
+  padding-bottom: 24px;
+  font-size: 24px;
+}
 .wrappImg {
   width: 160px;
   height: 160px;
 }
 .list {
+  padding-top: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: var(--font-family);
 }
 .element {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 .wrappSocMedia {
   display: flex;
+  gap: 8px;
+  padding-bottom: 24px;
+}
+.btnSoc {
+  border: none;
+  padding: 0;
 }
 .rights {
   text-align: center;
@@ -28,5 +41,12 @@
   .wrappImg {
     width: 200px;
     height: 200px;
+  }
+  .title {
+    padding-bottom: 32px;
+    font-size: 40px;
+  }
+  .list {
+    font-size: 18px;
   }
 }
