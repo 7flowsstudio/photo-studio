@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div>
       <div className={s.containerFooter}>
-        <h3>{t("title")}</h3>
+        <h3 className={s.title}>{t("title")}</h3>
         <div className={s.wrappImg}>
           <Image
             src="/img/footer/footer.png"
@@ -53,18 +53,22 @@ const Footer = () => {
           </li>
         </ul>
         <div className={s.wrappSocMedia}>
-          <Image
-            src="/img/icons/icon-inst.svg"
-            alt="instagram"
-            width={36}
-            height={36}
-          />
-          <Image
-            src="/img/icons/icon-faceb.svg"
-            alt="facebook"
-            width={36}
-            height={36}
-          />
+          <button className={s.btnSoc}>
+            <Image
+              src="/img/icons/icon-inst.svg"
+              alt="instagram"
+              width={36}
+              height={36}
+            />
+          </button>
+          <button className={s.btnSoc}>
+            <Image
+              src="/img/icons/icon-faceb.svg"
+              alt="facebook"
+              width={36}
+              height={36}
+            />
+          </button>
         </div>
       </div>
       <Image
