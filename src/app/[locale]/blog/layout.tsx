@@ -5,6 +5,7 @@ import { setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import BlogHeader from "@/components/BlogHeader/BlogHeader";
+import Footer from "@/components/Footer/Footer";
 
 type Props = {
   children: ReactNode;
@@ -27,6 +28,7 @@ export default async function BlogLayout({ children, params }: Props) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <BlogHeader />
           <main>{children}</main>
+          <Footer/>
         </NextIntlClientProvider>
       </body>
     </html>
