@@ -32,11 +32,11 @@ const Contacts = () => {
   };
 
   return (
-    <div className={s.section}>
+    <div id="booking" className={s.section}>
       <h2 className={s.title}>{t("title")}</h2>
       <p className={s.textFirst}>{t("text_1")}</p>
       <p className={s.textSec}>{t("text_2")}</p>
-      <div id="contacts" className={s.container}>
+      <div className={s.container}>
         <div className={s.wrappFirstCont}>
           {/* <h2 className={s.title}>{t("title")}</h2>
           <p className={s.textFirst}>{t("text_1")}</p>

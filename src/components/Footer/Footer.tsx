@@ -7,7 +7,7 @@ const Footer = () => {
   const t = useTranslations("Footer");
   return (
     <div>
-      <div className={s.containerFooter}>
+      <div id="contacts" className={s.containerFooter}>
         <h3 className={s.title}>{t("title")}</h3>
         <div className={s.wrappImg}>
           <Image

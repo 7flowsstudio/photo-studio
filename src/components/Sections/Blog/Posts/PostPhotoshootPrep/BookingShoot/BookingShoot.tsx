@@ -16,7 +16,7 @@ const BookingShoot = () => {
           <h2 className={styles.title}>{currentArticle.title}</h2>
           <p className={styles.details}>{currentArticle.details}</p>
         </div>
-        <a href={`/${locale}/#contacts`} className={styles.button}>
+        <a href={`/${locale}/#booking`} className={styles.button}>
           {currentArticle.button}
         </a>
         <div className={styles.socialList}>
