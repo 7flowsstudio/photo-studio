@@ -46,15 +46,7 @@ export const Images = ({items, category, expanded, onImageClick}: PhotoProps) =>
                 isMobile ? (
                         <>
                             {expandedMobile && activeRow === 0 && (
-                                <div className={s.expanderStandalone}>
-                                    <button
-                                        type="button"
-                                        className={s.expanderClose}
-                                        aria-label="Close"
-                                        onClick={() => setExpandedMobile(null)}
-                                    >
-                                        <Image className={s.expandedPhoto} src="/img/icons/close.svg" alt="close" width={12} height={12} />
-                                    </button>
+                                <div className={s.expanderStandalone} onClick={handleCollapse}>
                                     <img
                                         src={expandedMobile.url}
                                         alt={t(expandedMobile.alt)}
