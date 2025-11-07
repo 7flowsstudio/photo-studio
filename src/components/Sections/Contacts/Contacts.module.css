@@ -3,11 +3,11 @@
   flex-direction: column;
   padding: 40px 16px;
   justify-content: center;
+  scroll-margin-top: 60px;
 }
 .container {
   display: flex;
   flex-direction: column;
-  scroll-margin-top: 60px;
   padding: 16px;
   background: rgba(251, 244, 230, 1);
   border-radius: 8px;
