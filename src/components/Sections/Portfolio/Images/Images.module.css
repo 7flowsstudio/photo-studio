@@ -40,3 +40,38 @@
         font-size: 40px;
     }
 }
+
+.expanderStandalone {
+    margin-bottom: 16px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+.expanderCell {
+    grid-column: 1 / -1;
+    list-style: none;
+}
+
+.expanderBox {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: zoom-out;
+}
+
+.expanderImg {
+    display: block;
+    width: 343px;
+    height: auto;
+    object-fit: cover;
+    margin-inline: auto;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .expanderStandalone,
+    .expanderCell { display: none; }
+}
