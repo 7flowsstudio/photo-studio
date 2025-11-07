@@ -5,7 +5,7 @@ import {Categories} from "@/components/Sections/Portfolio/Categories/Categories"
 import s from "./Portfolio.module.css"
 import {Images} from "@/components/Sections/Portfolio/Images/Images";
 import {items} from "@/lib/collections/portfolio";
-import {useCallback, useEffect, useState} from "react";
+import {useCallback,  useRef, useState} from "react";
 import {Item} from "@/lib/types/types";
 import ImageModal from "@/components/Sections/Portfolio/ImageModal/ImageModal";
 
@@ -17,14 +17,31 @@ export const Portfolio = () => {
     const [modalOpen, setModalOpen] = useState<boolean>(false);
     const [activeImage, setActiveImage] = useState<Item | null>(null);
 
+    const sectionRef = useRef<HTMLElement>(null);
+
     const filtered = items.filter(item => item.category === selectedCategory);
+
+    const scrollToSectionTop = useCallback(() => {
+        requestAnimationFrame(() => {
+            sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }, []);
 
     const handleSelectCategory = useCallback((type: string) => {
         setSelectedCategory(type);
-        setExpanded(false)
-    }, []);
+        setExpanded(false);
+        scrollToSectionTop();
+    }, [scrollToSectionTop]);
 
-    const toggleExpanded =() => setExpanded(prev => !prev);
+    const toggleExpanded = useCallback(() => {
+        setExpanded(prev => {
+            const next = !prev;
+            if (prev && !next) {
+                scrollToSectionTop();
+            }
+            return next;
+        });
+    }, [scrollToSectionTop]);
 
     const handleImageClick = useCallback((image: Item) => {
         setActiveImage(image);
@@ -37,7 +54,7 @@ export const Portfolio = () => {
     }, [])
 
     return (
-        <section id="portfolio" className={s.portfolio_section}>
+        <section id="portfolio" ref={sectionRef} className={s.portfolio_section}>
             <h2 className={s.portfolio_title}>{t("title")}</h2>
 
             <Categories
