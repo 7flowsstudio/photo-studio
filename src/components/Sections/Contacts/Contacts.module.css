@@ -111,6 +111,9 @@
   /* justify-content: center; */
 }
 @media screen and (min-width: 960px) {
+  .section {
+    padding: 60px;
+  }
   .container {
     padding: 32px;
     gap: 24px;
