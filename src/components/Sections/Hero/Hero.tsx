@@ -8,7 +8,7 @@ export default function Hero() {
   const t = useTranslations("Hero");
 
   return (
-    <section className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       <Image
         src={bgMobile}
         fill
@@ -39,7 +39,7 @@ export default function Hero() {
             </span>
             <h1 className={styles.title}>{t("title")}</h1>
             <p className={styles.details}>{t("details")}</p>
-            <a href="#contacts" className={`${styles.btn} ${styles.desktop}`}>
+            <a href="#booking" className={`${styles.btn} ${styles.desktop}`}>
               {t("button")}
             </a>
           </div>
@@ -48,7 +48,7 @@ export default function Hero() {
             <span className={`${styles.bage} ${styles.mobile}`}>
               {t("bage")}
             </span>
-            <a href="#contacts" className={`${styles.btn} ${styles.mobile}`}>
+            <a href="#booking" className={`${styles.btn} ${styles.mobile}`}>
               {t("button")}
             </a>
           </div>

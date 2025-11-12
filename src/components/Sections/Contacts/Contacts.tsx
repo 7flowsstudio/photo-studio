@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import s from "./Contacts.module.css";
 import Image from "next/image";
+import Modal from "./Modal/Modal";
 
 const Contacts = () => {
   const t = useTranslations("Contacts");
@@ -12,28 +13,30 @@ const Contacts = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<FormData>();
 
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [modalMessage, setModalMessage] = useState("");
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
-    setStatus("idle");
-    try {
-      await sendEmail(data);
-      setStatus("success");
+    if (data.name && data.number) {
+      // setModalMessage(t("form.success"));
+      setIsModalOpen(true);
       reset();
-    } catch {
-      setStatus("error");
+    } else {
+      // setModalMessage(t("form.error"));
+      setIsModalOpen(true);
     }
   };
 
   return (
-    <div className={s.section}>
+    <div id="booking" className={s.section}>
       <h2 className={s.title}>{t("title")}</h2>
       <p className={s.textFirst}>{t("text_1")}</p>
       <p className={s.textSec}>{t("text_2")}</p>
-      <div id="contacts" className={s.container}>
+      <div className={s.container}>
         <div className={s.wrappFirstCont}>
           {/* <h2 className={s.title}>{t("title")}</h2>
           <p className={s.textFirst}>{t("text_1")}</p>
@@ -75,12 +78,8 @@ const Contacts = () => {
                 />
               </label>
 
-              <button
-                className={s.btnCont}
-                type="submit"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? t("form.sending") : t("form.submit")}
+              <button className={s.btnCont} type="submit">
+                {t("form.submit")}
               </button>
 
               {status === "success" && <p>{t("form.success")}</p>}
@@ -121,6 +120,11 @@ const Contacts = () => {
           ></iframe>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        // message={modalMessage}
+      />
     </div>
   );
 };

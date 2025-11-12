@@ -1,258 +1,264 @@
 .services_section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 16px;
-    scroll-margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  scroll-margin-top: 60px;
 
-    @media screen and (min-width: 768px) {
-        padding: 60px 48px;
-        scroll-margin-top: 40px;
-    }
+  @media screen and (min-width: 768px) {
+    padding: 60px 48px;
+    scroll-margin-top: 40px;
+  }
 
-    @media screen and (min-width: 1280px) {
-        scroll-margin-top: 20px;
-    }
+  @media screen and (min-width: 1280px) {
+    scroll-margin-top: 20px;
+  }
 }
 
 .services_title {
-    font-weight: 600;
-    line-height: 1.2;
-    text-transform: uppercase;
-    margin-bottom: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 
-    @media screen and (min-width: 768px) {
-        font-size: 40px;
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
 
-        margin-bottom: 32px;
-    }
+    margin-bottom: 32px;
+  }
 }
 
 .packages {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
-    @media screen and (min-width: 768px) and (max-width: 1439px) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "pack pack"
-            "pack pack"
-            "additional additional"
-        ;
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "pack pack"
+      "pack pack"
+      "additional additional";
 
-        gap: 24px
-    }
+    gap: 24px;
+  }
 
-    @media screen and (min-width: 1440px) {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-auto-rows: 1fr;
-        gap: 24px;
-        align-items: stretch;
-    }
+  @media screen and (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 24px;
+    align-items: stretch;
+  }
 }
 
 .package_item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 
-    padding: 16px;
+  padding: 16px;
 
-    background-color: var(--beige);
-    border-radius: 8px;
+  background-color: var(--beige);
+  border-radius: 8px;
 
-    width: 100%;
-    height: 374px;
+  width: 100%;
+  height: 374px;
 
-    @media screen and (min-width: 768px) {
-        height: 493px;
+  @media screen and (min-width: 768px) {
+    height: 493px;
 
-        padding: 24px;
-    }
+    padding: 24px;
+  }
 
-    @media screen and (min-width: 1440px) {
-        max-width: unset;
-    }
+  @media screen and (min-width: 1440px) {
+    max-width: unset;
+  }
 }
 
 .package_item_name {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.5;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
 
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 
-    @media screen and (min-width: 1440px) {
-        font-size: 32px;
-        margin-bottom: 32px;
-    }
+  @media screen and (min-width: 1440px) {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
 }
 
 .package_item_desc {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
 
-    color: var(--grey-dark);
+  color: var(--grey-dark);
 
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 
-    @media screen and (min-width: 1440px) {
-        font-size: 18px;
-        margin-bottom: 16px;
-    }
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
 }
 
 .package_list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 
-    @media screen and (min-width: 1440px) {
-        gap: 16px;
-    }
+  @media screen and (min-width: 1440px) {
+    gap: 16px;
+  }
 }
 
 .package_list_item {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 
-    align-items: center;
+  align-items: center;
 }
 
 .package_list_item_icon {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .package_list_item_text {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
 
-    color: var(--grey-dark);
+  color: var(--grey-dark);
 
-    @media screen and (min-width: 1440px) {
-        font-size: 18px;
-    }
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
+  }
 }
 
 .package_item_price {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.5;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: var(--second-family);
 
-    @media screen and (min-width: 768px) {
-        font-size: 32px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
 }
 
 .additional_pack {
-    background-color: var(--grey);
-    border-radius: 8px;
+  background-color: var(--grey);
+  border-radius: 8px;
 
-    padding-top: 16px;
+  padding-top: 16px;
 
-    @media screen and (min-width: 768px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        width: 100%;
-        grid-area: additional;
-        padding-top: 0;
-        padding-left: 24px;
-    }
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    height: 493px;
+    grid-area: additional;
+    padding-top: 0;
+    padding-left: 24px;
+  }
 
-    @media screen and (min-width: 1440px) {
-        grid-column: 2/ span 2;
-        grid-row: 2;
-        gap: 48px;
-    }
+  @media screen and (min-width: 1440px) {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    gap: 48px;
+  }
 }
 
 .additional_pack_wrap {
-    padding-right: 16px;
-    padding-left: 16px;
+  padding-right: 16px;
+  padding-left: 16px;
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        padding: 0;
-    }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    height: 493px;
+    padding: 0;
+  }
 }
 
 .additional_pack_name {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 1.5;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.5;
 
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 
-    @media screen and (min-width: 768px) {
-        margin-top: 32px;
-        margin-bottom: 24px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
 }
 
 .additional_pack_list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 
-    @media screen and (min-width: 768px) {
-        margin-bottom: 0;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .additional_pack_text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
 
-    @media screen and (min-width: 768px) and (max-width: 1439px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    font-size: 16px;
+  }
 }
 
 .orderBtn {
-    width: 100%;
+  width: 100%;
 
-    padding: 8px 24px;
-    margin-bottom: 16px;
+  padding: 8px 24px;
+  margin-bottom: 16px;
 
-    justify-content: center;
+  justify-content: center;
 
-    border-radius: 8px;
-    border: 1px solid var(--gold);
+  border-radius: 8px;
+  border: 1px solid var(--gold);
 
-    font-family: var(--second-family);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.5;
+  font-family: var(--second-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
 
-    @media screen and (min-width: 768px) {
-        margin-top: auto;
-    }
+  @media screen and (min-width: 768px) {
+    margin-top: auto;
+  }
 }
 
 .orderBtn:hover {
-    background-color: var(--gold);
+  background-color: var(--gold);
 }
 
 .image {
-    border-radius: 0 8px 8px 0;
-    width: 100%;
+  border-radius: 0 8px 8px 0;
+  width: 100%;
 
-    @media screen and (min-width: 768px) {
-        height: 100%;
-        object-fit: cover;
-    }
+  @media screen and (min-width: 768px) {
+    /* max-height: 493px; */
+    height: 100%;
+    object-fit: cover;
+  }
+  @media screen and (min-width: 1024px) {
+    max-height: 493px;
+  }
 }

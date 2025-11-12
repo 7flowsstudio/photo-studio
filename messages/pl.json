@@ -265,6 +265,11 @@
       "invalidNumber": "Nieprawidłowy numer"
     }
   },
+  "Modal": {
+    "title": "DZIĘKUJĘ ZA TWOJE ZGŁOSZENIE!",
+    "text": "Otrzymałam Twoją wiadomość i wkrótce się z Tobą skontaktuję, aby omówić szczegóły sesji zdjęciowej.",
+    "button": "NA STRONĘ GŁÓWNĄ"
+  },
   "Blog": {
     "title": "Trochę przydatne",
     "details": "Na blogu dzielę się wskazówkami, spostrzeżeniami zza kulis i inspiracjami, dzięki którym poczujesz się pewniej przed kamerą i lepiej zrozumiesz moją pracę.",
