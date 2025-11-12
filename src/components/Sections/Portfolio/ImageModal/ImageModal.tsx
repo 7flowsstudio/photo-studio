@@ -5,6 +5,8 @@ import { Root as VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import Image from 'next/image';
 import styles from './ImageModal.module.css';
 import { Item } from '@/lib/types/types';
+import {useCallback, useEffect, useRef, useState} from "react";
+import type { CSSProperties } from 'react';
 
 type Props = {
     isOpen: boolean;
@@ -13,7 +15,39 @@ type Props = {
     alt: string;
 };
 
+
+
 export default function ImageModal({ isOpen, onClose, image, alt }: Props) {
+    const frameRef = useRef<HTMLDivElement>(null);
+    const [nat, setNat] = useState<{w:number; h:number} | null>(null);
+    const [pads, setPads] = useState<{x:number; y:number}>({x:0, y:0});
+
+    type ModalVars = CSSProperties & Record<'--pad-x' | '--pad-y', string>;
+
+    const styleVars: ModalVars = {
+        '--pad-x': `${pads.x}px`,
+        '--pad-y': `${pads.y}px`,
+    };
+
+    const recalcPads = useCallback(() => {
+        const frame = frameRef.current;
+        if (!frame || !nat) return;
+        const wF = frame.clientWidth;
+        const hF = frame.clientHeight;
+        const scale = Math.min(wF / nat.w, hF / nat.h);
+        const wImg = nat.w * scale;
+        const hImg = nat.h * scale;
+        setPads({ x: Math.max((wF - wImg) / 2, 0), y: Math.max((hF - hImg) / 2, 0) });
+    }, [nat]);
+
+    useEffect(() => {
+        if (!isOpen) return;
+        recalcPads();
+        const onResize = () => recalcPads();
+        window.addEventListener('resize', onResize);
+        return () => window.removeEventListener('resize', onResize);
+    }, [isOpen, recalcPads]);
+
     return (
         <Dialog.Root open={isOpen} onOpenChange={(open) => { if (!open) onClose(); }}>
             <Dialog.Portal>
@@ -33,7 +67,11 @@ export default function ImageModal({ isOpen, onClose, image, alt }: Props) {
 
                     <div className={styles.panel}>
                         {image && (
-                            <div className={styles.frame}>
+                            <div
+                                ref={frameRef}
+                                className={styles.frame}
+                                style={styleVars}
+                            >
                                 <button
                                     type="button"
                                     aria-label="Close"
@@ -45,14 +83,20 @@ export default function ImageModal({ isOpen, onClose, image, alt }: Props) {
                                            width={40}
                                            height={40} />
                                 </button>
-                                <Image
-                                    src={image.url}
-                                    alt={alt}
-                                    width={544}
-                                    height={900}
-                                    priority
-                                    className={styles.img}
-                                />
+                                <div className={styles.imgClip}>
+                                    <Image
+                                        src={image.url}
+                                        alt={alt}
+                                        width={544}
+                                        height={900}
+                                        priority
+                                        className={styles.img}
+                                        onLoadingComplete={(el) => {
+                                            setNat({ w: el.naturalWidth, h: el.naturalHeight });
+                                            requestAnimationFrame(recalcPads);
+                                        }}
+                                    />
+                                </div>
                             </div>
                         )}
                     </div>

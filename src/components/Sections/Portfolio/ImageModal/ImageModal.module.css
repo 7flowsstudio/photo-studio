@@ -3,56 +3,69 @@
   z-index: 50;
 }
 
-.wrapper {
-  position: fixed;
-  left: 50%;
-  /* центр по вертикалі всередині (100vh - header) */
-  top: calc(72px + (100vh - 72px) / 2);
-  transform: translate(-50%, -50%);
+.wrapper{
+    position: fixed;
+    left: 50%;
+    top: calc(72px + (100vh - 72px) / 2);
+    transform: translate(-50%, -50%);
 
-  background: transparent;
-  outline: none;
+    background: transparent;
+    outline: none;
+    z-index: 9999;
 }
 
-.overlay {
-  position: fixed;
-  top: 72px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  pointer-events: none;
+.overlay{
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    pointer-events: none;
+    z-index: 9998;
 }
 
-.panel {
-  position: relative;
-  background: transparent;
-  outline: none;
+.panel{
+    position: relative;
+    background: transparent;
+    /*outline: none;*/
 }
 
-.frame {
-  width: min(90vw, 544px);
-  height: min(80vh, 900px);
-  border-radius: 8px;
-  overflow: hidden;
-  background: transparent;
+.frame{
+    position: relative;
+    /*display: inline-block;*/
+    width: min(90vw, 544px);
+    height: min(80vh, 900px);
+    /*border-radius: 16px;*/
+    /*overflow: hidden;*/
+    background: transparent;
 }
 
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-
-  border-radius: 8px;
+.imgClip{
+    position: absolute;
+    inset: var(--pad-y) var(--pad-x);
+    border-radius: 16px;
+    overflow: hidden;
+    isolation: isolate;
 }
 
-.close {
-  position: absolute;
-  top: 8px;
-  right: 76px;
-  padding: 0;
-  border: none;
+.img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background: transparent;
+    border-radius: 0;
+}
+
+.close{
+    position: absolute;
+    top: calc(var(--pad-y, 0px) + 8px);
+    right: calc(var(--pad-x, 0px) + 8px);
+    padding: 0;
+    border: none;
+    z-index: 1;
 }
